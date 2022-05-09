@@ -10,6 +10,8 @@ public class BumperScript : MonoBehaviour
     public int points;
 
     AudioSource audioData;
+
+    public GameObject lightingManager;
  
     void Start () {
         ball = GameObject.FindGameObjectWithTag ("Ball");
@@ -22,6 +24,7 @@ public class BumperScript : MonoBehaviour
             ball.GetComponent<Rigidbody>().AddExplosionForce(bumperForce, transform.position, 1);
             audioData.Play(0);
             SumScore.Add(points);
+            lightingManager.GetComponent<LightingManagerScript>().LightUp();
         }
     }    
 }
