@@ -21,6 +21,7 @@ public class LightingManagerScript : MonoBehaviour
     {
         int temp = Random.Range(0, lights.Length);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
+        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f));
         StartCoroutine(LightDelay(temp));       
     }
 
