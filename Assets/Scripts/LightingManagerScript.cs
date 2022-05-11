@@ -22,13 +22,13 @@ public class LightingManagerScript : MonoBehaviour
         int temp = Random.Range(0, lights.Length);
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 3));
+        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 1));
         StartCoroutine(LightDelay(temp));       
     }
 
     IEnumerator LightDelay(int temp) {
         yield return new WaitForSeconds (0.5f);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 3));
+        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 1));
     }
 }
