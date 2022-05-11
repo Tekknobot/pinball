@@ -33,7 +33,7 @@ public class LightingManagerScript : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E)) {
             StartCoroutine(StrobeWhite());
-        }            
+        }                  
 
         if (Input.GetKeyUp(KeyCode.Alpha1)) {
             foreach (GameObject light in lights) {
@@ -132,7 +132,8 @@ public class LightingManagerScript : MonoBehaviour
             Material m = this.lights[temp].GetComponent<Renderer>().material;
             Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
             this.lights[temp].GetComponent<Renderer>().material = null;
-            this.lights[temp].GetComponent<Renderer>().material.color = alternateColor;
+            this.lights[temp].GetComponent<Renderer>().material.color = alternateColor * Mathf.Pow(2, 2);
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
             yield return new WaitForSeconds(0.1f);
             this.lights[temp].GetComponent<Renderer>().material = m;
             this.lights[temp].GetComponent<Renderer>().material.color = c;             
@@ -145,12 +146,12 @@ public class LightingManagerScript : MonoBehaviour
     IEnumerator StrobeWhite() {
         foreach (GameObject light in lights) {
             int temp = Random.Range(0, lights.Length);
-            alternateColor = Color.white;
+            alternateColor = Color.black;
 
             Material m = this.lights[temp].GetComponent<Renderer>().material;
             Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
             this.lights[temp].GetComponent<Renderer>().material = null;
-            this.lights[temp].GetComponent<Renderer>().material.color = Color.white;
+            this.lights[temp].GetComponent<Renderer>().material.color = Color.white * Mathf.Pow(2, 2);
             yield return new WaitForSeconds(0.1f);
             this.lights[temp].GetComponent<Renderer>().material = m;
             this.lights[temp].GetComponent<Renderer>().material.color = c;             
