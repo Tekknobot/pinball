@@ -13,7 +13,7 @@ public class LightingManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lights = GameObject.FindGameObjectsWithTag("Light");           
+        lights = GameObject.FindGameObjectsWithTag("Light");          
     }
 
     void Update() 
@@ -27,13 +27,21 @@ public class LightingManagerScript : MonoBehaviour
             }
         }
 
+        if (Input.GetKey(KeyCode.S)) {
+            StartCoroutine(StrobeRandom());
+        }
+
+        if (Input.GetKey(KeyCode.E)) {
+            StartCoroutine(StrobeWhite());
+        }            
+
         if (Input.GetKeyUp(KeyCode.Alpha1)) {
             foreach (GameObject light in lights) {
                 alternateColor = Color.cyan;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
             }
-        }    
+        } 
 
         if (Input.GetKeyUp(KeyCode.Alpha2)) {
             foreach (GameObject light in lights) {
@@ -115,4 +123,40 @@ public class LightingManagerScript : MonoBehaviour
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
     }
+
+    IEnumerator StrobeRandom() {
+        foreach (GameObject light in lights) {
+            int temp = Random.Range(0, lights.Length);
+            alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+
+            Material m = this.lights[temp].GetComponent<Renderer>().material;
+            Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
+            this.lights[temp].GetComponent<Renderer>().material = null;
+            this.lights[temp].GetComponent<Renderer>().material.color = alternateColor;
+            yield return new WaitForSeconds(0.1f);
+            this.lights[temp].GetComponent<Renderer>().material = m;
+            this.lights[temp].GetComponent<Renderer>().material.color = c;             
+            
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        }           
+    }  
+
+    IEnumerator StrobeWhite() {
+        foreach (GameObject light in lights) {
+            int temp = Random.Range(0, lights.Length);
+            alternateColor = Color.white;
+
+            Material m = this.lights[temp].GetComponent<Renderer>().material;
+            Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
+            this.lights[temp].GetComponent<Renderer>().material = null;
+            this.lights[temp].GetComponent<Renderer>().material.color = Color.white;
+            yield return new WaitForSeconds(0.1f);
+            this.lights[temp].GetComponent<Renderer>().material = m;
+            this.lights[temp].GetComponent<Renderer>().material.color = c;             
+            
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        }           
+    }      
 }
