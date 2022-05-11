@@ -6,7 +6,7 @@ public class BumperScript : MonoBehaviour
 {
     public int bumperForce = 800;
     private GameObject ball;
-
+    
     public int points;
 
     AudioSource audioData;
@@ -25,6 +25,7 @@ public class BumperScript : MonoBehaviour
             audioData.Play(0);
             SumScore.Add(points);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();
+            lightingManager.GetComponent<LightingManagerScript>().CheckTable();
         }
     }    
 }

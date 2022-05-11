@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour {
   Vector3 initialPosition;
+  public GameObject wall;
+  public GameObject lightingManager;
 
-  void Spawn() {
+  public void Spawn() {
     transform.position = new Vector3(Random.Range(-.25f, .25f),
       initialPosition.y, initialPosition.z);
   }
@@ -19,6 +21,13 @@ public class BallScript : MonoBehaviour {
   void Update() {
     if (Input.GetKeyUp("escape")) {
       Spawn();
+    }
+  }
+
+  public void OnTriggerEnter (Collider collider)
+  {
+    if (collider.gameObject == wall) {
+      lightingManager.GetComponent<LightingManagerScript>().StrobeFunction();
     }
   }
 }

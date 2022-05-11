@@ -13,7 +13,8 @@ public class LightingManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lights = GameObject.FindGameObjectsWithTag("Light");          
+        lights = GameObject.FindGameObjectsWithTag("Light");   
+        ball = GameObject.FindGameObjectWithTag ("Ball");
     }
 
     void Update() 
@@ -115,7 +116,38 @@ public class LightingManagerScript : MonoBehaviour
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        lights[temp].gameObject.GetComponent<LightScript>().isLit = true;
         StartCoroutine(LightDelay(temp));       
+    }
+
+    public void LightUpAllCyan() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.cyan;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        }        
+    }
+
+    public void CheckTable() {
+        int amount = 0;
+
+        foreach (GameObject light in lights) {
+            if (light.GetComponent<LightScript>().isLit == true)  {
+                amount++;
+            }
+        }
+
+        if (amount >= lights.Length)
+        {
+            foreach (GameObject light in lights) {
+                light.GetComponent<LightScript>().isLit = false;
+            }
+            LightUpAllCyan();
+        }
+    }
+
+    public void StrobeFunction() {
+        StartCoroutine(StrobeGutter());
     }
 
     IEnumerator LightDelay(int temp) {
@@ -156,8 +188,32 @@ public class LightingManagerScript : MonoBehaviour
             this.lights[temp].GetComponent<Renderer>().material = m;
             this.lights[temp].GetComponent<Renderer>().material.color = c;             
             
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            this.lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            this.lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
         }           
-    }      
+    }        
+
+    IEnumerator StrobeGutter() {
+        foreach (GameObject light in lights) {
+            int temp = Random.Range(0, lights.Length);
+            alternateColor = Color.black;
+
+            Material m = light.GetComponent<Renderer>().material;
+            Color32 c = light.GetComponent<Renderer>().material.color;
+            light.GetComponent<Renderer>().material = null;
+            light.GetComponent<Renderer>().material.color = Color.white * Mathf.Pow(2, 2);
+            yield return new WaitForSeconds(0.1f);
+            light.GetComponent<Renderer>().material = m;
+            light.GetComponent<Renderer>().material.color = c;             
+            
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        }   
+        
+        foreach (GameObject light in lights) {
+            light.GetComponent<LightScript>().isLit = false;
+        }        
+        
+        ball.GetComponent<BallScript>().Spawn();        
+    }     
 }
