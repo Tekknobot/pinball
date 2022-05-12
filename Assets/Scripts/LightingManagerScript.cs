@@ -208,6 +208,8 @@ public class LightingManagerScript : MonoBehaviour
             
             light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+
+            light.gameObject.GetComponent<AudioSource>().Play();
         }   
         
         foreach (GameObject light in lights) {
