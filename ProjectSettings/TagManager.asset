@@ -7,6 +7,8 @@ TagManager:
   - Ball
   - Panel
   - Light
+  - LeftLight
+  - RightLight
   layers:
   - Default
   - TransparentFX

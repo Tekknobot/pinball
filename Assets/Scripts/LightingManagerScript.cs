@@ -5,6 +5,8 @@ using UnityEngine;
 public class LightingManagerScript : MonoBehaviour
 {
     private GameObject[] lights;
+    private GameObject[] leftLights;
+    private GameObject[] rightLights;
     private GameObject ball;
 
     public Color defaultColor = new Color32(85, 85, 85, 255);
@@ -14,6 +16,8 @@ public class LightingManagerScript : MonoBehaviour
     void Start()
     {
         lights = GameObject.FindGameObjectsWithTag("Light");   
+        leftLights = GameObject.FindGameObjectsWithTag("LeftLight");
+        rightLights = GameObject.FindGameObjectsWithTag("RightLight");
         ball = GameObject.FindGameObjectWithTag ("Ball");
     }
 
@@ -109,15 +113,12 @@ public class LightingManagerScript : MonoBehaviour
         }                  
     }
 
-    // Update is called once per frame
-    public void LightUp()
-    {
+    public void LightUp() {
         int temp = Random.Range(0, lights.Length);
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
-        lights[temp].gameObject.GetComponent<LightScript>().isLit = true;
-        StartCoroutine(LightDelay(temp));       
+        lights[temp].gameObject.GetComponent<LightScript>().isLit = true;       
     }
 
     public void LightUpAllCyan() {
@@ -126,7 +127,7 @@ public class LightingManagerScript : MonoBehaviour
             light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
         }        
-    }
+    }      
 
     public void CheckTable() {
         int amount = 0;
@@ -150,10 +151,12 @@ public class LightingManagerScript : MonoBehaviour
         StartCoroutine(StrobeGutter());
     }
 
-    IEnumerator LightDelay(int temp) {
-        yield return new WaitForSeconds (0.5f);
-        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+    public void RunwayLeftFunction() {
+        StartCoroutine(RunwayLeft());
+    }  
+
+    public void RunwayRightFunction() {
+        StartCoroutine(RunwayRight());
     }
 
     IEnumerator StrobeRandom() {
@@ -217,5 +220,41 @@ public class LightingManagerScript : MonoBehaviour
         }        
         
         ball.GetComponent<BallScript>().Spawn();        
-    }     
+    }
+
+    IEnumerator RunwayLeft() {
+        foreach (GameObject leftLight in leftLights) {
+            int temp = Random.Range(0, leftLights.Length);
+            alternateColor = Color.black;
+
+            Material m = leftLight.GetComponent<Renderer>().material;
+            Color32 c = leftLight.GetComponent<Renderer>().material.color;
+            leftLight.GetComponent<Renderer>().material = null;
+            leftLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, 2);
+            yield return new WaitForSeconds(0.1f);
+            leftLight.GetComponent<Renderer>().material = m;
+            leftLight.GetComponent<Renderer>().material.color = c;             
+            
+            leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        }        
+    }   
+
+    IEnumerator RunwayRight() {
+        foreach (GameObject rightLight in rightLights) {
+            int temp = Random.Range(0, rightLights.Length);
+            alternateColor = Color.black;
+
+            Material m = rightLight.GetComponent<Renderer>().material;
+            Color32 c = rightLight.GetComponent<Renderer>().material.color;
+            rightLight.GetComponent<Renderer>().material = null;
+            rightLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, 2);
+            yield return new WaitForSeconds(0.1f);
+            rightLight.GetComponent<Renderer>().material = m;
+            rightLight.GetComponent<Renderer>().material.color = c;             
+            
+            rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        }        
+    }       
 }
