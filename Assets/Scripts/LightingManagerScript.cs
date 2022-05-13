@@ -231,7 +231,7 @@ public class LightingManagerScript : MonoBehaviour
             Color32 c = leftLight.GetComponent<Renderer>().material.color;
             leftLight.GetComponent<Renderer>().material = null;
             leftLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, 2);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             leftLight.GetComponent<Renderer>().material = m;
             leftLight.GetComponent<Renderer>().material.color = c;             
             
@@ -249,7 +249,7 @@ public class LightingManagerScript : MonoBehaviour
             Color32 c = rightLight.GetComponent<Renderer>().material.color;
             rightLight.GetComponent<Renderer>().material = null;
             rightLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, 2);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
             rightLight.GetComponent<Renderer>().material = m;
             rightLight.GetComponent<Renderer>().material.color = c;             
             
