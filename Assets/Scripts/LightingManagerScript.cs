@@ -219,7 +219,7 @@ public class LightingManagerScript : MonoBehaviour
             light.GetComponent<LightScript>().isLit = false;
         }        
         
-        ball.GetComponent<BallScript>().Spawn();        
+        //ball.GetComponent<BallScript>().Spawn();        
     }
 
     IEnumerator RunwayLeft() {

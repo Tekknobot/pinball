@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BallScript : MonoBehaviour {
@@ -7,20 +5,13 @@ public class BallScript : MonoBehaviour {
   public GameObject wall;
   public GameObject lightingManager;
 
-  public void Spawn() {
-    transform.position = new Vector3(Random.Range(-.25f, .25f),
-      initialPosition.y, initialPosition.z);
-  }
-
   void Start() {
     initialPosition = transform.position;
-
-    Spawn();
   }
 
   void Update() {
     if (Input.GetKeyUp("escape")) {
-      Spawn();
+      transform.position = initialPosition;
     }
   }
 
