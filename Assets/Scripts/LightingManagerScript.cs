@@ -10,7 +10,9 @@ public class LightingManagerScript : MonoBehaviour
     private GameObject ball;
 
     public Color defaultColor = new Color32(85, 85, 85, 255);
-    public Color alternateColor = new Color32(80, 80, 80, 255); 
+    public Color alternateColor = new Color32(80, 80, 80, 255);
+
+    List<int> list = new List<int>(); 
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,11 @@ public class LightingManagerScript : MonoBehaviour
         leftLights = GameObject.FindGameObjectsWithTag("LeftLight");
         rightLights = GameObject.FindGameObjectsWithTag("RightLight");
         ball = GameObject.FindGameObjectWithTag ("Ball");
+
+        for (int n = 0; n < lights.Length; n++)    //  Populate list
+        {
+            list.Add(n);
+        }        
     }
 
     void Update() 
@@ -26,6 +33,8 @@ public class LightingManagerScript : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.R)) {
             foreach (GameObject light in lights) {
                 int temp = Random.Range(0, lights.Length);
+                int i = list[temp];
+                list.RemoveAt(temp); 
                 alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
                 lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
