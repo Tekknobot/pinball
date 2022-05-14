@@ -34,7 +34,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 int temp = Random.Range(0, lights.Length);
                 int i = list[temp];
-                list.RemoveAt(temp); 
+                list.RemoveAt(i); 
                 alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
                 lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
