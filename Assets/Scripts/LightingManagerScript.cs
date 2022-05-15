@@ -17,6 +17,8 @@ public class LightingManagerScript : MonoBehaviour
     List<int> list = new List<int>(); 
 
     public float intesity = 3;
+    public int temp;
+    public int i;
 
     // Start is called before the first frame update
     void Start()
@@ -130,13 +132,15 @@ public class LightingManagerScript : MonoBehaviour
     }
 
     public void LightUp() {
-        int temp = Random.Range(0, lights.Length);
-        int i = list[temp];
+        if (i >= lights.Length) {
+            i = 0;
+        }
         list.RemoveAt(i); 
+        i++;
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        lights[temp].gameObject.GetComponent<LightScript>().isLit = true;       
+        lights[i].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+        lights[i].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        lights[i].gameObject.GetComponent<LightScript>().isLit = true;       
     }
 
     public void LightUpAllCyan() {
@@ -154,7 +158,7 @@ public class LightingManagerScript : MonoBehaviour
                 amount++;
             }
         }
-        if (amount >= lights.Length)
+        if (amount == lights.Length)
         {
             foreach (GameObject light in lights) {
                 light.GetComponent<LightScript>().isLit = false;
