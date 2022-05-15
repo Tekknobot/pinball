@@ -9,6 +9,8 @@ TagManager:
   - Light
   - LeftLight
   - RightLight
+  - StandUp
+  - LightingManager
   layers:
   - Default
   - TransparentFX
@@ -19,8 +21,8 @@ TagManager:
   - Glow
   - NoWall
   - Wall
-  - 
-  - 
+  - StandUp
+  - Floor
   - 
   - 
   - 

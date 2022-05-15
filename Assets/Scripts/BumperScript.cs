@@ -6,6 +6,7 @@ public class BumperScript : MonoBehaviour
 {
     public int bumperForce = 800;
     private GameObject ball;
+    private GameObject[] standUps;
     
     public int points;
 
@@ -14,7 +15,8 @@ public class BumperScript : MonoBehaviour
     public GameObject lightingManager;
  
     void Start () {
-        ball = GameObject.FindGameObjectWithTag ("Ball");
+        ball = GameObject.FindGameObjectWithTag("Ball");
+        standUps = GameObject.FindGameObjectsWithTag("StandUp");
         audioData = GetComponent<AudioSource>();        
     }
  
@@ -26,6 +28,7 @@ public class BumperScript : MonoBehaviour
             SumScore.Add(points);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();
             lightingManager.GetComponent<LightingManagerScript>().CheckTable();
+            lightingManager.GetComponent<LightingManagerScript>().CheckStandUp();
         }
-    }    
+    } 
 }

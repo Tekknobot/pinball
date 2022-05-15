@@ -9,10 +9,14 @@ public class LightingManagerScript : MonoBehaviour
     private GameObject[] rightLights;
     private GameObject ball;
 
+    private GameObject[] standUps;
+
     public Color defaultColor = new Color32(85, 85, 85, 255);
     public Color alternateColor = new Color32(80, 80, 80, 255);
 
     List<int> list = new List<int>(); 
+
+    public float intesity = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -22,10 +26,11 @@ public class LightingManagerScript : MonoBehaviour
         rightLights = GameObject.FindGameObjectsWithTag("RightLight");
         ball = GameObject.FindGameObjectWithTag ("Ball");
 
-        for (int n = 0; n < lights.Length; n++)    //  Populate list
-        {
-            list.Add(n);
-        }        
+        standUps = GameObject.FindGameObjectsWithTag("StandUp");
+
+        PopulateLightList();
+
+        StartCoroutine(StrobeGutter());      
     }
 
     void Update() 
@@ -37,7 +42,7 @@ public class LightingManagerScript : MonoBehaviour
                 list.RemoveAt(i); 
                 alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
                 lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         }
 
@@ -53,7 +58,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.cyan;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         } 
 
@@ -61,7 +66,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.magenta;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         } 
 
@@ -69,7 +74,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.yellow;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         } 
 
@@ -77,7 +82,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.red;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         }       
 
@@ -85,7 +90,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.green;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         } 
 
@@ -93,7 +98,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.blue;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         }    
 
@@ -101,7 +106,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.grey;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         }  
 
@@ -109,7 +114,7 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.white;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         }  
 
@@ -117,16 +122,18 @@ public class LightingManagerScript : MonoBehaviour
             foreach (GameObject light in lights) {
                 alternateColor = Color.black;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
         }                  
     }
 
     public void LightUp() {
         int temp = Random.Range(0, lights.Length);
+        int i = list[temp];
+        list.RemoveAt(i); 
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+        lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         lights[temp].gameObject.GetComponent<LightScript>().isLit = true;       
     }
 
@@ -134,19 +141,17 @@ public class LightingManagerScript : MonoBehaviour
         foreach (GameObject light in lights) {
             alternateColor = Color.cyan;
             light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }        
     }      
 
     public void CheckTable() {
         int amount = 0;
-
         foreach (GameObject light in lights) {
             if (light.GetComponent<LightScript>().isLit == true)  {
                 amount++;
             }
         }
-
         if (amount >= lights.Length)
         {
             foreach (GameObject light in lights) {
@@ -154,6 +159,19 @@ public class LightingManagerScript : MonoBehaviour
             }
             LightUpAllCyan();
         }
+    }
+
+    public void CheckStandUp() {
+        foreach (GameObject standUp in standUps) {
+            standUp.GetComponent<StandUpScript>().hasTriggered = false;
+        }     
+    }
+
+    public void PopulateLightList() {
+        for (int n = 0; n < lights.Length; n++)    //  Populate list
+        {
+            list.Add(n);
+        }         
     }
 
     public void StrobeFunction() {
@@ -177,13 +195,13 @@ public class LightingManagerScript : MonoBehaviour
             Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
             this.lights[temp].GetComponent<Renderer>().material = null;
             this.lights[temp].GetComponent<Renderer>().material.color = alternateColor * Mathf.Pow(2, 2);
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             yield return new WaitForSeconds(0.1f);
             this.lights[temp].GetComponent<Renderer>().material = m;
             this.lights[temp].GetComponent<Renderer>().material.color = c;             
             
             lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }           
     }  
 
@@ -195,13 +213,13 @@ public class LightingManagerScript : MonoBehaviour
             Material m = this.lights[temp].GetComponent<Renderer>().material;
             Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
             this.lights[temp].GetComponent<Renderer>().material = null;
-            this.lights[temp].GetComponent<Renderer>().material.color = Color.white * Mathf.Pow(2, 2);
+            this.lights[temp].GetComponent<Renderer>().material.color = Color.white * Mathf.Pow(2, intesity);
             yield return new WaitForSeconds(0.1f);
             this.lights[temp].GetComponent<Renderer>().material = m;
             this.lights[temp].GetComponent<Renderer>().material.color = c;             
             
             this.lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            this.lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            this.lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }           
     }        
 
@@ -213,13 +231,13 @@ public class LightingManagerScript : MonoBehaviour
             Material m = light.GetComponent<Renderer>().material;
             Color32 c = light.GetComponent<Renderer>().material.color;
             light.GetComponent<Renderer>().material = null;
-            light.GetComponent<Renderer>().material.color = Color.white * Mathf.Pow(2, 2);
+            light.GetComponent<Renderer>().material.color = Color.white * Mathf.Pow(2, intesity);
             yield return new WaitForSeconds(0.1f);
             light.GetComponent<Renderer>().material = m;
             light.GetComponent<Renderer>().material.color = c;             
             
             light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
 
             light.gameObject.GetComponent<AudioSource>().Play();
         }   
@@ -228,7 +246,8 @@ public class LightingManagerScript : MonoBehaviour
             light.GetComponent<LightScript>().isLit = false;
         }        
         
-        //ball.GetComponent<BallScript>().Spawn();        
+        CheckStandUp();  
+        PopulateLightList();     
     }
 
     IEnumerator RunwayLeft() {
@@ -239,13 +258,13 @@ public class LightingManagerScript : MonoBehaviour
             Material m = leftLight.GetComponent<Renderer>().material;
             Color32 c = leftLight.GetComponent<Renderer>().material.color;
             leftLight.GetComponent<Renderer>().material = null;
-            leftLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, 2);
+            leftLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity);
             yield return new WaitForSeconds(0.05f);
             leftLight.GetComponent<Renderer>().material = m;
             leftLight.GetComponent<Renderer>().material.color = c;             
             
             leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }        
     }   
 
@@ -257,13 +276,13 @@ public class LightingManagerScript : MonoBehaviour
             Material m = rightLight.GetComponent<Renderer>().material;
             Color32 c = rightLight.GetComponent<Renderer>().material.color;
             rightLight.GetComponent<Renderer>().material = null;
-            rightLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, 2);
+            rightLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity);
             yield return new WaitForSeconds(0.05f);
             rightLight.GetComponent<Renderer>().material = m;
             rightLight.GetComponent<Renderer>().material.color = c;             
             
             rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, 2));
+            rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }        
     }       
 }
