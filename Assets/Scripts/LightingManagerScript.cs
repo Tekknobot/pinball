@@ -30,7 +30,9 @@ public class LightingManagerScript : MonoBehaviour
 
         PopulateLightList();
 
-        StartCoroutine(StrobeGutter());      
+        StartCoroutine(StrobeGutter());
+        StartCoroutine(RunwayLeft());
+        StartCoroutine(RunwayRight());      
     }
 
     void Update() 
@@ -265,7 +267,8 @@ public class LightingManagerScript : MonoBehaviour
             
             leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        }        
+        }    
+        StartCoroutine(RunwayLeft());    
     }   
 
     IEnumerator RunwayRight() {
@@ -283,6 +286,7 @@ public class LightingManagerScript : MonoBehaviour
             
             rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        }        
+        }    
+        StartCoroutine(RunwayRight());    
     }       
 }

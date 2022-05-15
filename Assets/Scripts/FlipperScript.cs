@@ -14,14 +14,9 @@ public class FlipperScript : MonoBehaviour {
 
   AudioSource audioData;
 
-  public GameObject lightingManager;
-
   void Start() {
     hinge = GetComponent<HingeJoint>();
     audioData = GetComponent<AudioSource>();
-
-    lightingManager.GetComponent<LightingManagerScript>().RunwayLeftFunction();
-    lightingManager.GetComponent<LightingManagerScript>().RunwayRightFunction();
   }
 
   void Update() {
@@ -29,13 +24,7 @@ public class FlipperScript : MonoBehaviour {
 
     if (Input.GetKeyDown(key)) {
       hinge.useMotor = true;
-      audioData.Play(0);
-      if (key == "left shift") {
-        lightingManager.GetComponent<LightingManagerScript>().RunwayLeftFunction();        
-      }
-      if (key == "right shift") {
-        lightingManager.GetComponent<LightingManagerScript>().RunwayRightFunction();
-      }      
+      audioData.Play(0);   
     }
     else if (Input.GetKeyUp(key)) {
       hinge.useMotor = false;
