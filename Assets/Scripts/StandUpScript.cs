@@ -15,7 +15,7 @@ public class StandUpScript : MonoBehaviour {
 
     void Start() {
         upPosition = transform.position;
-        downPosition = transform.position + Vector3.down * transform.localScale.y;
+        downPosition = transform.position + Vector3.down * (transform.localScale.y+0.03f);
         audioData = GetComponent<AudioSource>(); 
 
         lightingManager = GameObject.FindGameObjectWithTag("LightingManager");
