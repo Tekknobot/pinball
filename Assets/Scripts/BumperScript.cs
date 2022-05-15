@@ -27,7 +27,6 @@ public class BumperScript : MonoBehaviour
             audioData.Play(0);
             SumScore.Add(points);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();
-            lightingManager.GetComponent<LightingManagerScript>().CheckTable();
             lightingManager.GetComponent<LightingManagerScript>().CheckStandUp();
         }
     } 

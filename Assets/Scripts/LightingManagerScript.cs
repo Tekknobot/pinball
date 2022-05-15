@@ -18,7 +18,7 @@ public class LightingManagerScript : MonoBehaviour
 
     public float intesity = 3;
     public int temp;
-    public int i;
+    public int indexCount;
 
     // Start is called before the first frame update
     void Start()
@@ -132,15 +132,19 @@ public class LightingManagerScript : MonoBehaviour
     }
 
     public void LightUp() {
-        if (i >= lights.Length) {
-            i = 0;
+        if (indexCount >= lights.Length) {
+            indexCount = 0;
+            foreach (GameObject light in lights) {
+                light.GetComponent<LightScript>().isLit = false;
+            }
+            LightUpAllCyan();
         }
-        list.RemoveAt(i); 
-        i++;
+        list.RemoveAt(indexCount); 
+        indexCount++;
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-        lights[i].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-        lights[i].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        lights[i].gameObject.GetComponent<LightScript>().isLit = true;       
+        lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+        lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        lights[indexCount].gameObject.GetComponent<LightScript>().isLit = true;       
     }
 
     public void LightUpAllCyan() {
@@ -149,22 +153,6 @@ public class LightingManagerScript : MonoBehaviour
             light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }        
-    }      
-
-    public void CheckTable() {
-        int amount = 0;
-        foreach (GameObject light in lights) {
-            if (light.GetComponent<LightScript>().isLit == true)  {
-                amount++;
-            }
-        }
-        if (amount == lights.Length)
-        {
-            foreach (GameObject light in lights) {
-                light.GetComponent<LightScript>().isLit = false;
-            }
-            LightUpAllCyan();
-        }
     }
 
     public void CheckStandUp() {
