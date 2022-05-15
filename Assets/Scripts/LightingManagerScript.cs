@@ -1,5 +1,7 @@
+
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LightingManagerScript : MonoBehaviour
@@ -17,7 +19,6 @@ public class LightingManagerScript : MonoBehaviour
     List<int> list = new List<int>(); 
 
     public float intesity = 3;
-    public int temp;
     public int indexCount;
 
     // Start is called before the first frame update
@@ -133,11 +134,12 @@ public class LightingManagerScript : MonoBehaviour
 
     public void LightUp() {
         if (indexCount >= lights.Length) {
-            indexCount = 0;
             foreach (GameObject light in lights) {
                 light.GetComponent<LightScript>().isLit = false;
             }
-            LightUpAllCyan();
+            PopulateLightList();
+            StartCoroutine(StrobeCyan(10));
+            indexCount = 0;
         }
         list.RemoveAt(indexCount); 
         indexCount++;
@@ -155,6 +157,14 @@ public class LightingManagerScript : MonoBehaviour
         }        
     }
 
+    public void LightUpAllBlack() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.black;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }        
+    }    
+
     public void CheckStandUp() {
         foreach (GameObject standUp in standUps) {
             standUp.GetComponent<StandUpScript>().hasTriggered = false;
@@ -170,14 +180,6 @@ public class LightingManagerScript : MonoBehaviour
 
     public void StrobeFunction() {
         StartCoroutine(StrobeGutter());
-    }
-
-    public void RunwayLeftFunction() {
-        StartCoroutine(RunwayLeft());
-    }  
-
-    public void RunwayRightFunction() {
-        StartCoroutine(RunwayRight());
     }
 
     IEnumerator StrobeRandom() {
@@ -198,6 +200,23 @@ public class LightingManagerScript : MonoBehaviour
             lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }           
     }  
+
+    IEnumerator StrobeCyan(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
+
+        for(int i = 0; i < 10; i++) {
+            LightUpAllCyan();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllCyan();
+        indexCount = 0;
+    } 
 
     IEnumerator StrobeWhite() {
         foreach (GameObject light in lights) {
@@ -241,22 +260,17 @@ public class LightingManagerScript : MonoBehaviour
         }        
         
         CheckStandUp();  
-        PopulateLightList();     
+        PopulateLightList();
+        indexCount = 0;     
     }
 
     IEnumerator RunwayLeft() {
         foreach (GameObject leftLight in leftLights) {
             int temp = Random.Range(0, leftLights.Length);
             alternateColor = Color.black;
-
-            Material m = leftLight.GetComponent<Renderer>().material;
-            Color32 c = leftLight.GetComponent<Renderer>().material.color;
             leftLight.GetComponent<Renderer>().material = null;
             leftLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity);
-            yield return new WaitForSeconds(0.05f);
-            leftLight.GetComponent<Renderer>().material = m;
-            leftLight.GetComponent<Renderer>().material.color = c;             
-            
+            yield return new WaitForSeconds(0.05f);                        
             leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }    
@@ -267,15 +281,9 @@ public class LightingManagerScript : MonoBehaviour
         foreach (GameObject rightLight in rightLights) {
             int temp = Random.Range(0, rightLights.Length);
             alternateColor = Color.black;
-
-            Material m = rightLight.GetComponent<Renderer>().material;
-            Color32 c = rightLight.GetComponent<Renderer>().material.color;
             rightLight.GetComponent<Renderer>().material = null;
             rightLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity);
-            yield return new WaitForSeconds(0.05f);
-            rightLight.GetComponent<Renderer>().material = m;
-            rightLight.GetComponent<Renderer>().material.color = c;             
-            
+            yield return new WaitForSeconds(0.05f);                       
             rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }    
