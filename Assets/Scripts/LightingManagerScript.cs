@@ -33,26 +33,13 @@ public class LightingManagerScript : MonoBehaviour
 
         PopulateLightList();
 
-        StartCoroutine(StrobeGutter());
-        StartCoroutine(RunwayLeft());
-        StartCoroutine(RunwayRight());      
+        StartCoroutine(StrobeRandom(3));      
     }
 
     void Update() 
     {
-        if (Input.GetKeyUp(KeyCode.R)) {
-            foreach (GameObject light in lights) {
-                int temp = Random.Range(0, lights.Length);
-                int i = list[temp];
-                list.RemoveAt(i); 
-                alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-                lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-            }
-        }
-
         if (Input.GetKey(KeyCode.S)) {
-            StartCoroutine(StrobeRandom());
+            StartCoroutine(StrobeRandom(10));
         }
 
         if (Input.GetKey(KeyCode.E)) {
@@ -141,12 +128,12 @@ public class LightingManagerScript : MonoBehaviour
             StartCoroutine(StrobeCyan(10));
             indexCount = 0;
         }
-        list.RemoveAt(indexCount); 
-        indexCount++;
+        list.RemoveAt(indexCount);
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
         lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         lights[indexCount].gameObject.GetComponent<LightScript>().isLit = true;       
+        indexCount++;
     }
 
     public void LightUpAllCyan() {
@@ -165,6 +152,15 @@ public class LightingManagerScript : MonoBehaviour
         }        
     }    
 
+    public void LightUpAllRandom() {
+        foreach (GameObject light in lights) {
+            int temp = Random.Range(0, lights.Length);
+            alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }
+    }
+
     public void CheckStandUp() {
         foreach (GameObject standUp in standUps) {
             standUp.GetComponent<StandUpScript>().hasTriggered = false;
@@ -182,24 +178,24 @@ public class LightingManagerScript : MonoBehaviour
         StartCoroutine(StrobeGutter());
     }
 
-    IEnumerator StrobeRandom() {
-        foreach (GameObject light in lights) {
-            int temp = Random.Range(0, lights.Length);
-            alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
+    IEnumerator StrobeRandom(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
 
-            Material m = this.lights[temp].GetComponent<Renderer>().material;
-            Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
-            this.lights[temp].GetComponent<Renderer>().material = null;
-            this.lights[temp].GetComponent<Renderer>().material.color = alternateColor * Mathf.Pow(2, 2);
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-            yield return new WaitForSeconds(0.1f);
-            this.lights[temp].GetComponent<Renderer>().material = m;
-            this.lights[temp].GetComponent<Renderer>().material.color = c;             
-            
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        }           
-    }  
+        for(int i = 0; i < 10; i++) {
+            LightUpAllRandom();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllBlack();
+        StartCoroutine(RunwayLeft());
+        StartCoroutine(RunwayRight());        
+        indexCount = 0;
+    } 
 
     IEnumerator StrobeCyan(float frequency ,float onRatio = 1, float offRatio = 1)
     {

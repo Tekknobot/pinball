@@ -1664,7 +1664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f7ef1fd0a90d646a59c00209fb56b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 0.05
   hasTriggered: 0
   lightingManager: {fileID: 0}
 --- !u!65 &119479447
@@ -4095,8 +4095,7 @@ MonoBehaviour:
   defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
   alternateColor: {r: 0, g: 1, b: 0, a: 1}
   intesity: 3
-  temp: 0
-  i: 0
+  indexCount: 0
 --- !u!4 &382312139
 Transform:
   m_ObjectHideFlags: 0
@@ -16038,7 +16037,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f7ef1fd0a90d646a59c00209fb56b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 0.05
   hasTriggered: 0
   lightingManager: {fileID: 0}
 --- !u!65 &1370137455
@@ -16280,7 +16279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5f7ef1fd0a90d646a59c00209fb56b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.01
+  moveSpeed: 0.05
   hasTriggered: 0
   lightingManager: {fileID: 0}
 --- !u!65 &1372111179
