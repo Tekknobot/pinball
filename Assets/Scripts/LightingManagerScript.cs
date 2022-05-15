@@ -21,6 +21,8 @@ public class LightingManagerScript : MonoBehaviour
     public float intesity = 3;
     public int indexCount;
 
+    public int colorLevel = 1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,19 +35,13 @@ public class LightingManagerScript : MonoBehaviour
 
         PopulateLightList();
 
-        StartCoroutine(StrobeRandom(3));      
+        StartCoroutine(StrobeRandom(3));
+        StartCoroutine(RunwayLeft());
+        StartCoroutine(RunwayRight());                      
     }
 
     void Update() 
-    {
-        if (Input.GetKey(KeyCode.S)) {
-            StartCoroutine(StrobeRandom(10));
-        }
-
-        if (Input.GetKey(KeyCode.E)) {
-            StartCoroutine(StrobeWhite());
-        }                  
-
+    {                
         if (Input.GetKeyUp(KeyCode.Alpha1)) {
             foreach (GameObject light in lights) {
                 alternateColor = Color.cyan;
@@ -120,19 +116,41 @@ public class LightingManagerScript : MonoBehaviour
     }
 
     public void LightUp() {
-        if (indexCount >= lights.Length) {
+        if (indexCount == lights.Length) {
             foreach (GameObject light in lights) {
                 light.GetComponent<LightScript>().isLit = false;
             }
             PopulateLightList();
-            StartCoroutine(StrobeCyan(10));
+            if (colorLevel == 1) {
+                StartCoroutine(StrobeCyan(10));
+            }
+            else if (colorLevel == 2) {
+                StartCoroutine(StrobeMegenta(10));
+            }
+            else if (colorLevel == 3) {
+                StartCoroutine(StrobeYellow(10));
+            }
+            else if (colorLevel == 4) {
+                StartCoroutine(StrobeRed(10));
+            }
+            else if (colorLevel == 5) {
+                StartCoroutine(StrobeGreen(10));
+            }
+            else if (colorLevel == 6) {
+                StartCoroutine(StrobeBlue(10));
+            }
+            else if (colorLevel == 7) {
+                StartCoroutine(StrobeWhite(10));
+            }                                                            
+
             indexCount = 0;
+            colorLevel++;
         }
-        list.RemoveAt(indexCount);
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
         lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
         lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        lights[indexCount].gameObject.GetComponent<LightScript>().isLit = true;       
+        lights[indexCount].gameObject.GetComponent<LightScript>().isLit = true; 
+        list.RemoveAt(indexCount);      
         indexCount++;
     }
 
@@ -143,6 +161,54 @@ public class LightingManagerScript : MonoBehaviour
             light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }        
     }
+
+    public void LightUpAllMagenta() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.magenta;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }        
+    }  
+
+    public void LightUpAllRed() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.red;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }        
+    }
+
+    public void LightUpAllYellow() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.yellow;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }        
+    }  
+
+    public void LightUpAllGreen() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.green;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }        
+    } 
+
+    public void LightUpAllBlue() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.blue;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }        
+    }    
+
+    public void LightUpAllWhite() {
+        foreach (GameObject light in lights) {
+            alternateColor = Color.white;
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        }        
+    }                       
 
     public void LightUpAllBlack() {
         foreach (GameObject light in lights) {
@@ -191,9 +257,8 @@ public class LightingManagerScript : MonoBehaviour
             yield return new WaitForSeconds(offDuration);
         }
 
-        LightUpAllBlack();
-        StartCoroutine(RunwayLeft());
-        StartCoroutine(RunwayRight());        
+        LightUpAllBlack();      
+        PopulateLightList();  
         indexCount = 0;
     } 
 
@@ -214,23 +279,108 @@ public class LightingManagerScript : MonoBehaviour
         indexCount = 0;
     } 
 
-    IEnumerator StrobeWhite() {
-        foreach (GameObject light in lights) {
-            int temp = Random.Range(0, lights.Length);
-            alternateColor = Color.black;
+    IEnumerator StrobeMegenta(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
 
-            Material m = this.lights[temp].GetComponent<Renderer>().material;
-            Color32 c = this.lights[temp].GetComponent<Renderer>().material.color;
-            this.lights[temp].GetComponent<Renderer>().material = null;
-            this.lights[temp].GetComponent<Renderer>().material.color = Color.white * Mathf.Pow(2, intesity);
-            yield return new WaitForSeconds(0.1f);
-            this.lights[temp].GetComponent<Renderer>().material = m;
-            this.lights[temp].GetComponent<Renderer>().material.color = c;             
-            
-            this.lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            this.lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        }           
-    }        
+        for(int i = 0; i < 10; i++) {
+            LightUpAllMagenta();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllMagenta();
+        indexCount = 0;
+    } 
+
+
+    IEnumerator StrobeRed(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
+
+        for(int i = 0; i < 10; i++) {
+            LightUpAllRed();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllRed();
+        indexCount = 0;
+    }     
+
+    IEnumerator StrobeYellow(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
+
+        for(int i = 0; i < 10; i++) {
+            LightUpAllYellow();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllYellow();
+        indexCount = 0;
+    }       
+
+    IEnumerator StrobeGreen(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
+
+        for(int i = 0; i < 10; i++) {
+            LightUpAllGreen();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllGreen();
+        indexCount = 0;
+    }      
+
+    IEnumerator StrobeBlue(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
+
+        for(int i = 0; i < 10; i++) {
+            LightUpAllBlue();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllBlue();
+        indexCount = 0;
+    }  
+
+    IEnumerator StrobeWhite(float frequency ,float onRatio = 1, float offRatio = 1)
+    {
+        float cycleDuration = 1.0f / frequency;
+        float onDuration = (onRatio/ (onRatio + offRatio)) * cycleDuration;
+        float offDuration = (offRatio/ (onRatio + offRatio)) * cycleDuration; 
+
+        for(int i = 0; i < 10; i++) {
+            LightUpAllWhite();
+            yield return new WaitForSeconds(onDuration);        
+            LightUpAllBlack();
+            yield return new WaitForSeconds(offDuration);
+        }
+
+        LightUpAllWhite();
+        indexCount = 0;
+    }          
 
     IEnumerator StrobeGutter() {
         foreach (GameObject light in lights) {
