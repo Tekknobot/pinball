@@ -11,6 +11,9 @@ TagManager:
   - RightLight
   - StandUp
   - LightingManager
+  - Wall
+  - Floor
+  - Flipper
   layers:
   - Default
   - TransparentFX

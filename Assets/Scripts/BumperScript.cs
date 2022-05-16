@@ -13,6 +13,7 @@ public class BumperScript : MonoBehaviour
     AudioSource audioData;
 
     public GameObject lightingManager;
+    public GameObject table;
  
     void Start () {
         ball = GameObject.FindGameObjectWithTag("Ball");
@@ -28,6 +29,7 @@ public class BumperScript : MonoBehaviour
             SumScore.Add(points);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();
             lightingManager.GetComponent<LightingManagerScript>().CheckStandUp();
+            table.GetComponent<AudioManagerScript>().PlayRandomSong();
         }
     } 
 }
