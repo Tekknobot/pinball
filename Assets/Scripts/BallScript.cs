@@ -19,6 +19,7 @@ public class BallScript : MonoBehaviour {
     if (Input.GetKeyUp("escape")) {
       transform.position = initialPosition;
       SumScore.Reset();
+      lightingManager.GetComponent<LightingManagerScript>().colorLevel = 1;
     }
   }
 
