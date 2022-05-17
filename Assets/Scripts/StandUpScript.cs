@@ -14,6 +14,11 @@ public class StandUpScript : MonoBehaviour {
     public Material blackMech;
     public Material cyanMech;
     public Material magentaMech;
+    public Material yellowMech;
+    public Material redMech;
+    public Material greenMech;
+    public Material blueMech;
+
     public GameObject textureObject;    
 
     public GameObject lightingManager;
@@ -49,7 +54,27 @@ public class StandUpScript : MonoBehaviour {
 
         if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 3) {
             textureObject.GetComponent<Renderer>().material = magentaMech;
-        }        
+        }      
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 4) {
+            textureObject.GetComponent<Renderer>().material = yellowMech;
+        }
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 5) {
+            textureObject.GetComponent<Renderer>().material = redMech;
+        }
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 6) {
+            textureObject.GetComponent<Renderer>().material = blueMech;
+        }      
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 7) {
+            textureObject.GetComponent<Renderer>().material = greenMech;
+        }   
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel >= 8) {
+            textureObject.GetComponent<Renderer>().material = blackMech;
+        }                          
     }
 
     public void OnTriggerEnter (Collider collider) {

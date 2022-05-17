@@ -12118,6 +12118,10 @@ MonoBehaviour:
   blackMech: {fileID: 2100000, guid: 851499525c40c484cb09f414f7035058, type: 2}
   cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
   magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
+  yellowMech: {fileID: 2100000, guid: ce3f16f3e03b4674982ee32b575560ce, type: 2}
+  redMech: {fileID: 2100000, guid: 79a270bc29e329646aaa0cf1f55672f7, type: 2}
+  greenMech: {fileID: 2100000, guid: 8d849c7e1914efc469db0490ebe627cc, type: 2}
+  blueMech: {fileID: 2100000, guid: 79db8379cd6e66947b2b01882db8b188, type: 2}
   textureObject: {fileID: 195838943}
   lightingManager: {fileID: 382312137}
   explosion: {fileID: 3358794395020958510, guid: 432ba0f7a1fbe0643b8e10b491bee4f6, type: 3}
@@ -14393,6 +14397,10 @@ MonoBehaviour:
   blackMech: {fileID: 2100000, guid: 851499525c40c484cb09f414f7035058, type: 2}
   cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
   magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
+  yellowMech: {fileID: 2100000, guid: ce3f16f3e03b4674982ee32b575560ce, type: 2}
+  redMech: {fileID: 2100000, guid: 79a270bc29e329646aaa0cf1f55672f7, type: 2}
+  greenMech: {fileID: 2100000, guid: 8d849c7e1914efc469db0490ebe627cc, type: 2}
+  blueMech: {fileID: 2100000, guid: 79db8379cd6e66947b2b01882db8b188, type: 2}
   textureObject: {fileID: 1953318358}
   lightingManager: {fileID: 382312137}
   explosion: {fileID: 3358794395020958510, guid: 432ba0f7a1fbe0643b8e10b491bee4f6, type: 3}
@@ -18888,6 +18896,10 @@ MonoBehaviour:
   blackMech: {fileID: 2100000, guid: 851499525c40c484cb09f414f7035058, type: 2}
   cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
   magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
+  yellowMech: {fileID: 2100000, guid: ce3f16f3e03b4674982ee32b575560ce, type: 2}
+  redMech: {fileID: 2100000, guid: 79a270bc29e329646aaa0cf1f55672f7, type: 2}
+  greenMech: {fileID: 2100000, guid: 8d849c7e1914efc469db0490ebe627cc, type: 2}
+  blueMech: {fileID: 2100000, guid: 79db8379cd6e66947b2b01882db8b188, type: 2}
   textureObject: {fileID: 2036430190}
   lightingManager: {fileID: 382312137}
   explosion: {fileID: 3358794395020958510, guid: 432ba0f7a1fbe0643b8e10b491bee4f6, type: 3}

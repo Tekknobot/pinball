@@ -46,58 +46,65 @@ public class LightingManagerScript : MonoBehaviour
     {                
         if (Input.GetKeyUp(KeyCode.Alpha1)) {
             foreach (GameObject light in lights) {
+                alternateColor = Color.black;
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+            }
+            colorLevel = 1;
+        } 
+
+        if (Input.GetKeyUp(KeyCode.Alpha2)) {
+            foreach (GameObject light in lights) {
                 alternateColor = Color.cyan;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
+            colorLevel = 2;
         } 
 
-        if (Input.GetKeyUp(KeyCode.Alpha2)) {
+        if (Input.GetKeyUp(KeyCode.Alpha3)) {
             foreach (GameObject light in lights) {
                 alternateColor = Color.magenta;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
+            colorLevel = 3;
         } 
 
-        if (Input.GetKeyUp(KeyCode.Alpha3)) {
+        if (Input.GetKeyUp(KeyCode.Alpha4)) {
             foreach (GameObject light in lights) {
                 alternateColor = Color.yellow;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
-        } 
+            colorLevel = 4;
+        }       
 
-        if (Input.GetKeyUp(KeyCode.Alpha4)) {
+        if (Input.GetKeyUp(KeyCode.Alpha5)) {
             foreach (GameObject light in lights) {
                 alternateColor = Color.red;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
-        }       
+            colorLevel = 5;
+        } 
 
-        if (Input.GetKeyUp(KeyCode.Alpha5)) {
+        if (Input.GetKeyUp(KeyCode.Alpha6)) {
             foreach (GameObject light in lights) {
                 alternateColor = Color.green;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
-        } 
+            colorLevel = 6;
+        }     
 
-        if (Input.GetKeyUp(KeyCode.Alpha6)) {
+        if (Input.GetKeyUp(KeyCode.Alpha7)) {
             foreach (GameObject light in lights) {
                 alternateColor = Color.blue;
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
-        }    
-
-        if (Input.GetKeyUp(KeyCode.Alpha7)) {
-            foreach (GameObject light in lights) {
-                alternateColor = Color.grey;
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-            }
+            colorLevel = 7;
         }  
 
         if (Input.GetKeyUp(KeyCode.Alpha8)) {
@@ -106,14 +113,7 @@ public class LightingManagerScript : MonoBehaviour
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
                 light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
             }
-        }  
-
-        if (Input.GetKeyUp(KeyCode.Alpha9)) {
-            foreach (GameObject light in lights) {
-                alternateColor = Color.black;
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-                light.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-            }
+            colorLevel = 8;
         }                  
     }
 
