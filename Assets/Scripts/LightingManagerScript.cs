@@ -7,6 +7,7 @@ using UnityEngine;
 public class LightingManagerScript : MonoBehaviour
 {
     private GameObject[] lights;
+    private GameObject[] bumpers;
     private GameObject[] leftLights;
     private GameObject[] rightLights;
     private GameObject ball;
@@ -26,7 +27,8 @@ public class LightingManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lights = GameObject.FindGameObjectsWithTag("Light");   
+        lights = GameObject.FindGameObjectsWithTag("Light");  
+        bumpers = GameObject.FindGameObjectsWithTag("Bumper"); 
         leftLights = GameObject.FindGameObjectsWithTag("LeftLight");
         rightLights = GameObject.FindGameObjectsWithTag("RightLight");
         ball = GameObject.FindGameObjectWithTag ("Ball");
@@ -225,7 +227,7 @@ public class LightingManagerScript : MonoBehaviour
             lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
             lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }
-    }
+    }     
 
     public void CheckStandUp() {
         foreach (GameObject standUp in standUps) {

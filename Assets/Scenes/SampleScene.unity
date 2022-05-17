@@ -20081,9 +20081,10 @@ GameObject:
   - component: {fileID: 1152683662347142346}
   - component: {fileID: 1152683662347142347}
   - component: {fileID: 1152683662347142344}
-  m_Layer: 0
+  - component: {fileID: 1152683662347142350}
+  m_Layer: 6
   m_Name: Capsule (14)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20229,6 +20230,9 @@ MonoBehaviour:
   points: 25
   lightingManager: {fileID: 382312137}
   table: {fileID: 3299634415933429265}
+  defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
+  alternateColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  intesity: 3
 --- !u!33 &1152683662347142348
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20257,7 +20261,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3de919afc1e999d45a517293054cf7d9, type: 2}
+  - {fileID: 2100000, guid: 8f6e3dc678d9e83448c9affa6fc9438e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20279,6 +20283,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1152683662347142350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152683662347142342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 35b0df0b27a35a54f8d928cf9aae3177, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!4 &1152683662384850130
 Transform:
   m_ObjectHideFlags: 0
@@ -29132,6 +29153,9 @@ MonoBehaviour:
   points: 25
   lightingManager: {fileID: 382312137}
   table: {fileID: 3299634415933429265}
+  defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
+  alternateColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  intesity: 3
 --- !u!136 &1337524043488845561
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -29166,7 +29190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3de919afc1e999d45a517293054cf7d9, type: 2}
+  - {fileID: 2100000, guid: 8f6e3dc678d9e83448c9affa6fc9438e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29210,9 +29234,10 @@ GameObject:
   - component: {fileID: 1337524043488845561}
   - component: {fileID: 1337524043488845560}
   - component: {fileID: 1337524043488845567}
-  m_Layer: 0
+  - component: {fileID: 1337524043488845568}
+  m_Layer: 6
   m_Name: Capsule (8)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29328,6 +29353,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1337524043488845568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337524043488845565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 8acbb9defed29eb4cb1d313ba601a48d, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!54 &1337524043503772052
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -30058,9 +30100,10 @@ GameObject:
   - component: {fileID: 1552767884575622897}
   - component: {fileID: 1552767884575622896}
   - component: {fileID: 1552767884575622895}
-  m_Layer: 0
+  - component: {fileID: 1552767884575622900}
+  m_Layer: 6
   m_Name: Capsule (16)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30192,6 +30235,9 @@ MonoBehaviour:
   points: 25
   lightingManager: {fileID: 382312137}
   table: {fileID: 3299634415933429265}
+  defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
+  alternateColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  intesity: 3
 --- !u!136 &1552767884575622897
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30226,7 +30272,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3de919afc1e999d45a517293054cf7d9, type: 2}
+  - {fileID: 2100000, guid: 8f6e3dc678d9e83448c9affa6fc9438e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30256,6 +30302,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552767884575622893}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1552767884575622900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552767884575622893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: c5da5c53b4def5149bddaeb7866e9304, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &1552767884781387077
 GameObject:
   m_ObjectHideFlags: 0
@@ -30303,9 +30366,10 @@ GameObject:
   - component: {fileID: 1552767885353881926}
   - component: {fileID: 1552767885353881925}
   - component: {fileID: 1552767885353881924}
-  m_Layer: 0
+  - component: {fileID: 1552767885353881929}
+  m_Layer: 6
   m_Name: Capsule (15)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30437,6 +30501,9 @@ MonoBehaviour:
   points: 25
   lightingManager: {fileID: 382312137}
   table: {fileID: 3299634415933429265}
+  defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
+  alternateColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  intesity: 3
 --- !u!136 &1552767885353881926
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30471,7 +30538,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3de919afc1e999d45a517293054cf7d9, type: 2}
+  - {fileID: 2100000, guid: 8f6e3dc678d9e83448c9affa6fc9438e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30501,6 +30568,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552767885353881922}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1552767885353881929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552767885353881922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 09528a4554c144b4eb7374dc6ccf2229, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!1 &1552767885378169788
 GameObject:
   m_ObjectHideFlags: 0
@@ -33723,7 +33807,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3de919afc1e999d45a517293054cf7d9, type: 2}
+  - {fileID: 2100000, guid: 8f6e3dc678d9e83448c9affa6fc9438e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -33775,6 +33859,9 @@ MonoBehaviour:
   points: 25
   lightingManager: {fileID: 382312137}
   table: {fileID: 3299634415933429265}
+  defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
+  alternateColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  intesity: 3
 --- !u!82 &5486093061032386973
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33900,13 +33987,31 @@ GameObject:
   - component: {fileID: 5486093061032386971}
   - component: {fileID: 5486093061032386972}
   - component: {fileID: 5486093061032386973}
-  m_Layer: 0
+  - component: {fileID: 5486093061032386976}
+  m_Layer: 6
   m_Name: Capsule (10)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5486093061032386976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5486093061032386975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 8b38b61c58498f24b87cb6ccd94a9ea0, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!33 &5486093061894608934
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34257,7 +34362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3de919afc1e999d45a517293054cf7d9, type: 2}
+  - {fileID: 2100000, guid: 8f6e3dc678d9e83448c9affa6fc9438e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34309,6 +34414,9 @@ MonoBehaviour:
   points: 25
   lightingManager: {fileID: 382312137}
   table: {fileID: 3299634415933429265}
+  defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
+  alternateColor: {r: 0.3137255, g: 0.3137255, b: 0.3137255, a: 1}
+  intesity: 3
 --- !u!82 &5486093062533533437
 AudioSource:
   m_ObjectHideFlags: 0
@@ -34434,13 +34542,31 @@ GameObject:
   - component: {fileID: 5486093062533533435}
   - component: {fileID: 5486093062533533436}
   - component: {fileID: 5486093062533533437}
-  m_Layer: 0
+  - component: {fileID: 5486093062533533440}
+  m_Layer: 6
   m_Name: Capsule (11)
-  m_TagString: Untagged
+  m_TagString: Bumper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5486093062533533440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5486093062533533439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 931a59c465a95c84b894501b9a77035a, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!33 &5486093062730104337
 MeshFilter:
   m_ObjectHideFlags: 0
