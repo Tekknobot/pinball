@@ -11,6 +11,10 @@ public class StandUpScript : MonoBehaviour {
 
     AudioSource audioData;
 
+    public Material cyanMech;
+    public Material magentaMech;
+    public GameObject textureObject;    
+
     public GameObject lightingManager;
 
     void Start() {
@@ -30,6 +34,14 @@ public class StandUpScript : MonoBehaviour {
             transform.position += Vector3.up
                 * Mathf.Min(moveSpeed, Vector3.Distance(transform.position, upPosition));
         }
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 2) {
+            textureObject.GetComponent<Renderer>().material = cyanMech;
+        }
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 3) {
+            textureObject.GetComponent<Renderer>().material = magentaMech;
+        }        
     }
 
     public void OnTriggerEnter (Collider collider) {

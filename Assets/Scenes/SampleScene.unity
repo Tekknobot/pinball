@@ -12217,6 +12217,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.005
   hasTriggered: 0
+  cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
+  magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
+  textureObject: {fileID: 195838943}
   lightingManager: {fileID: 382312137}
 --- !u!65 &1372111179
 BoxCollider:
@@ -14357,6 +14360,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.005
   hasTriggered: 0
+  cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
+  magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
+  textureObject: {fileID: 1953318358}
   lightingManager: {fileID: 382312137}
 --- !u!65 &1596363043
 BoxCollider:
@@ -18847,6 +18853,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.005
   hasTriggered: 0
+  cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
+  magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
+  textureObject: {fileID: 2036430190}
   lightingManager: {fileID: 382312137}
 --- !u!65 &1981699393
 BoxCollider:
