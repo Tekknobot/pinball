@@ -12115,6 +12115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.01
   hasTriggered: 0
+  blackMech: {fileID: 2100000, guid: 851499525c40c484cb09f414f7035058, type: 2}
   cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
   magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
   textureObject: {fileID: 195838943}
@@ -14389,6 +14390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.01
   hasTriggered: 0
+  blackMech: {fileID: 2100000, guid: 851499525c40c484cb09f414f7035058, type: 2}
   cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
   magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
   textureObject: {fileID: 1953318358}
@@ -18883,6 +18885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.01
   hasTriggered: 0
+  blackMech: {fileID: 2100000, guid: 851499525c40c484cb09f414f7035058, type: 2}
   cyanMech: {fileID: 2100000, guid: 1085736c7a658f844b1f98b182df8543, type: 2}
   magentaMech: {fileID: 2100000, guid: b79e5606746e17e4cb0c9ec7c18bc134, type: 2}
   textureObject: {fileID: 2036430190}

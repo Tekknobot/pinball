@@ -11,6 +11,7 @@ public class StandUpScript : MonoBehaviour {
 
     AudioSource audioData;
 
+    public Material blackMech;
     public Material cyanMech;
     public Material magentaMech;
     public GameObject textureObject;    
@@ -36,6 +37,10 @@ public class StandUpScript : MonoBehaviour {
                 * Mathf.Min(moveSpeed, Vector3.Distance(transform.position, upPosition));
             
             GetComponent<BoxCollider>().enabled = true;
+        }
+
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 1) {
+            textureObject.GetComponent<Renderer>().material = blackMech;
         }
 
         if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 2) {
