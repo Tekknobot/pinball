@@ -16,6 +16,7 @@ public class StandUpScript : MonoBehaviour {
     public GameObject textureObject;    
 
     public GameObject lightingManager;
+    public GameObject explosion;
 
     void Start() {
         upPosition = transform.position;
@@ -49,6 +50,8 @@ public class StandUpScript : MonoBehaviour {
             hasTriggered = true;
             audioData.Play(0);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();
+            Instantiate(explosion, this.transform.position, Quaternion.identity);
+
         }
     }
 }
