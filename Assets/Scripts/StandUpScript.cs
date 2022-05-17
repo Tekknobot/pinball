@@ -51,7 +51,6 @@ public class StandUpScript : MonoBehaviour {
             audioData.Play(0);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();
             Instantiate(explosion, this.transform.position, Quaternion.identity);
-
         }
     }
 }
