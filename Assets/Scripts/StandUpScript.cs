@@ -34,6 +34,8 @@ public class StandUpScript : MonoBehaviour {
         else if (!hasTriggered && transform.position != upPosition){
             transform.position += Vector3.up
                 * Mathf.Min(moveSpeed, Vector3.Distance(transform.position, upPosition));
+            
+            GetComponent<BoxCollider>().enabled = true;
         }
 
         if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 2) {
@@ -51,7 +53,8 @@ public class StandUpScript : MonoBehaviour {
             audioData.Play(0);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();
             Instantiate(explosion, this.transform.position, Quaternion.identity);
-
+            GetComponent<BoxCollider>().enabled = false;
+            SumScore.Add(50);
         }
     }
 }

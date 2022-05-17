@@ -18,6 +18,7 @@ public class BallScript : MonoBehaviour {
   void Update() {
     if (Input.GetKeyUp("escape")) {
       transform.position = initialPosition;
+      SumScore.Reset();
     }
   }
 
@@ -25,6 +26,11 @@ public class BallScript : MonoBehaviour {
   {
     if (collider.gameObject == wall) {
       lightingManager.GetComponent<LightingManagerScript>().StrobeFunction();
+      SumScore.Reset();
+    }
+
+    if (SumScore.Score > SumScore.HighScore) {
+      SumScore.SaveHighScore();
     }
   }
 
