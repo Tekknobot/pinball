@@ -10,6 +10,8 @@ public class BallScript : MonoBehaviour {
   public AudioClip ballCollision;
   public AudioClip ballRoll;
 
+  public GameObject table;
+
   void Start() {
     initialPosition = transform.position;
     audioData = GetComponent<AudioSource>(); 
@@ -21,6 +23,10 @@ public class BallScript : MonoBehaviour {
       SumScore.Reset();
       lightingManager.GetComponent<LightingManagerScript>().colorLevel = 1;
     }
+
+    if (Input.GetKeyUp(KeyCode.Space)) {
+      GetComponent<Rigidbody>().AddExplosionForce(50, transform.position, 1);
+    }    
   }
 
   public void OnTriggerEnter (Collider collider)
