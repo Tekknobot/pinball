@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class LightingManagerScript : MonoBehaviour
 {
-    private GameObject[] lights;
+    public GameObject[] lights;
     private GameObject[] bumpers;
-    private GameObject[] leftLights;
-    private GameObject[] rightLights;
+    public GameObject[] leftLights;
+    public GameObject[] rightLights;
     private GameObject ball;
 
     private GameObject[] standUps;
@@ -24,17 +24,19 @@ public class LightingManagerScript : MonoBehaviour
 
     public int colorLevel = 1;
 
+    void Awake() {
+        //lights = GameObject.FindGameObjectsWithTag("Light");  
+        bumpers = GameObject.FindGameObjectsWithTag("Bumper"); 
+        // leftLights = GameObject.FindGameObjectsWithTag("LeftLight");
+        // rightLights = GameObject.FindGameObjectsWithTag("RightLight");
+        ball = GameObject.FindGameObjectWithTag ("Ball");
+
+        standUps = GameObject.FindGameObjectsWithTag("StandUp");        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        lights = GameObject.FindGameObjectsWithTag("Light");  
-        bumpers = GameObject.FindGameObjectsWithTag("Bumper"); 
-        leftLights = GameObject.FindGameObjectsWithTag("LeftLight");
-        rightLights = GameObject.FindGameObjectsWithTag("RightLight");
-        ball = GameObject.FindGameObjectWithTag ("Ball");
-
-        standUps = GameObject.FindGameObjectsWithTag("StandUp");
-
         PopulateLightList();
 
         StartCoroutine(StrobeRandom(3));
@@ -149,9 +151,9 @@ public class LightingManagerScript : MonoBehaviour
             colorLevel++;
         }
         alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-        lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-        lights[indexCount].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        lights[indexCount].gameObject.GetComponent<LightScript>().isLit = true; 
+        lights[indexCount].GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+        lights[indexCount].GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+        lights[indexCount].GetComponent<LightScript>().isLit = true; 
         list.RemoveAt(indexCount);      
         indexCount++;
     }
@@ -221,11 +223,10 @@ public class LightingManagerScript : MonoBehaviour
     }    
 
     public void LightUpAllRandom() {
-        foreach (GameObject light in lights) {
-            int temp = Random.Range(0, lights.Length);
+        for (int i = 0; i < lights.Length; i++) {
             alternateColor = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            lights[temp].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
+            lights[i].gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
+            lights[i].gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         }
     }     
 
@@ -413,28 +414,26 @@ public class LightingManagerScript : MonoBehaviour
     }
 
     IEnumerator RunwayLeft() {
-        foreach (GameObject leftLight in leftLights) {
-            int temp = Random.Range(0, leftLights.Length);
-            alternateColor = Color.black;
-            leftLight.GetComponent<Renderer>().material = null;
-            leftLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity);
-            yield return new WaitForSeconds(0.05f);                        
-            leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            leftLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        }    
-        StartCoroutine(RunwayLeft());    
+        while (true) {
+            for(int i = 0; i < leftLights.Length; i++) {
+                leftLights[i].GetComponent<Renderer>().material = null;
+                leftLights[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity+3);
+                yield return new WaitForSeconds(0.05f);                        
+                leftLights[i].GetComponent<Renderer>().material.SetColor("_Color", Color.black);
+                leftLights[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.black * Mathf.Pow(2, intesity+3));
+            }       
+        } 
     }   
 
     IEnumerator RunwayRight() {
-        foreach (GameObject rightLight in rightLights) {
-            int temp = Random.Range(0, rightLights.Length);
-            alternateColor = Color.black;
-            rightLight.GetComponent<Renderer>().material = null;
-            rightLight.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity);
-            yield return new WaitForSeconds(0.05f);                       
-            rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
-            rightLight.gameObject.GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
-        }    
-        StartCoroutine(RunwayRight());    
+        while (true) {
+            for(int i = 0; i < rightLights.Length; i++) {
+                rightLights[i].GetComponent<Renderer>().material = null;
+                rightLights[i].GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f) * Mathf.Pow(2, intesity+3);
+                yield return new WaitForSeconds(0.05f);                       
+                rightLights[i].GetComponent<Renderer>().material.SetColor("_Color", Color.black);
+                rightLights[i].GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.black * Mathf.Pow(2, intesity+3));
+            }       
+        }
     }       
 }

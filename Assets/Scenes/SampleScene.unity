@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 25634750}
   - component: {fileID: 25634749}
   - component: {fileID: 25634748}
-  - component: {fileID: 25634747}
   - component: {fileID: 25634746}
   m_Layer: 6
   m_Name: Cylinder (11)
@@ -256,19 +255,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &25634747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 25634744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &25634748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +578,6 @@ GameObject:
   - component: {fileID: 41616553}
   - component: {fileID: 41616552}
   - component: {fileID: 41616551}
-  - component: {fileID: 41616550}
   - component: {fileID: 41616549}
   m_Layer: 6
   m_Name: Cylinder (5)
@@ -712,19 +697,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &41616550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 41616547}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &41616551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,7 +791,6 @@ GameObject:
   - component: {fileID: 58531072}
   - component: {fileID: 58531071}
   - component: {fileID: 58531070}
-  - component: {fileID: 58531069}
   - component: {fileID: 58531068}
   m_Layer: 6
   m_Name: Cylinder (5)
@@ -939,19 +910,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &58531069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 58531066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &58531070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1046,7 +1004,6 @@ GameObject:
   - component: {fileID: 66305081}
   - component: {fileID: 66305080}
   - component: {fileID: 66305079}
-  - component: {fileID: 66305078}
   - component: {fileID: 66305077}
   m_Layer: 6
   m_Name: Cylinder (18)
@@ -1166,19 +1123,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &66305078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 66305075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &66305079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,7 +1217,6 @@ GameObject:
   - component: {fileID: 85462953}
   - component: {fileID: 85462952}
   - component: {fileID: 85462951}
-  - component: {fileID: 85462950}
   - component: {fileID: 85462949}
   m_Layer: 6
   m_Name: Cylinder (14)
@@ -1393,19 +1336,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &85462950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85462947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &85462951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1500,7 +1430,6 @@ GameObject:
   - component: {fileID: 114050498}
   - component: {fileID: 114050497}
   - component: {fileID: 114050496}
-  - component: {fileID: 114050495}
   - component: {fileID: 114050494}
   m_Layer: 6
   m_Name: Cylinder (2)
@@ -1620,19 +1549,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114050495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 114050492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &114050496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2278,7 +2194,6 @@ GameObject:
   - component: {fileID: 173143834}
   - component: {fileID: 173143833}
   - component: {fileID: 173143832}
-  - component: {fileID: 173143831}
   - component: {fileID: 173143830}
   m_Layer: 6
   m_Name: Cylinder (10)
@@ -2398,19 +2313,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &173143831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173143828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &173143832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2505,7 +2407,6 @@ GameObject:
   - component: {fileID: 188533740}
   - component: {fileID: 188533739}
   - component: {fileID: 188533738}
-  - component: {fileID: 188533737}
   - component: {fileID: 188533736}
   m_Layer: 6
   m_Name: Cylinder (9)
@@ -2625,19 +2526,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &188533737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188533734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &188533738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2732,7 +2620,6 @@ GameObject:
   - component: {fileID: 197377470}
   - component: {fileID: 197377469}
   - component: {fileID: 197377468}
-  - component: {fileID: 197377467}
   - component: {fileID: 197377466}
   m_Layer: 6
   m_Name: Cylinder (9)
@@ -2852,19 +2739,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &197377467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197377464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &197377468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2959,7 +2833,6 @@ GameObject:
   - component: {fileID: 201811030}
   - component: {fileID: 201811029}
   - component: {fileID: 201811028}
-  - component: {fileID: 201811027}
   - component: {fileID: 201811026}
   m_Layer: 6
   m_Name: Cylinder (16)
@@ -3079,19 +2952,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &201811027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201811024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &201811028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3186,7 +3046,6 @@ GameObject:
   - component: {fileID: 215319470}
   - component: {fileID: 215319469}
   - component: {fileID: 215319468}
-  - component: {fileID: 215319467}
   - component: {fileID: 215319466}
   m_Layer: 6
   m_Name: Cylinder (1)
@@ -3306,19 +3165,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &215319467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215319464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &215319468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3413,7 +3259,6 @@ GameObject:
   - component: {fileID: 277033126}
   - component: {fileID: 277033125}
   - component: {fileID: 277033124}
-  - component: {fileID: 277033123}
   - component: {fileID: 277033122}
   m_Layer: 6
   m_Name: Cylinder (7)
@@ -3533,19 +3378,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &277033123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 277033120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &277033124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4177,6 +4009,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44001e32be19a994086c8aa0c19d5d9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lights:
+  - {fileID: 1020694219}
+  - {fileID: 1920005667}
+  - {fileID: 1461886354}
+  - {fileID: 632113288}
+  - {fileID: 555592353}
+  - {fileID: 159751763}
+  - {fileID: 1071228051}
+  - {fileID: 346165976}
+  - {fileID: 2103098695}
+  - {fileID: 534063100}
+  - {fileID: 640789547}
+  - {fileID: 635013397}
+  - {fileID: 545807541}
+  - {fileID: 1670077139}
+  - {fileID: 1257841247}
+  - {fileID: 1761457444}
+  - {fileID: 1389507149}
+  - {fileID: 1552767885378169788}
+  - {fileID: 1552767885649188872}
+  - {fileID: 1552767886396567244}
+  - {fileID: 1552767885433558854}
+  - {fileID: 1552767885615468542}
+  - {fileID: 169465530}
+  leftLights:
+  - {fileID: 1337524042009743013}
+  - {fileID: 1337524042246425971}
+  - {fileID: 1337524042300263918}
+  - {fileID: 1337524043133340925}
+  - {fileID: 1552767886656707278}
+  - {fileID: 1552767885750527768}
+  - {fileID: 1552767886113843405}
+  - {fileID: 1337524043430439703}
+  - {fileID: 1337524042352005214}
+  - {fileID: 1337524041795048639}
+  - {fileID: 1337524042871182857}
+  - {fileID: 1337524042317044951}
+  - {fileID: 1337524042347356728}
+  - {fileID: 1337524043602193565}
+  - {fileID: 1337524042114280810}
+  - {fileID: 1337524041830738715}
+  - {fileID: 1337524041888859580}
+  - {fileID: 1337524042336494382}
+  - {fileID: 1337524042223915457}
+  - {fileID: 1337524042569670926}
+  - {fileID: 1337524041633444016}
+  - {fileID: 1765204180}
+  - {fileID: 2052956105}
+  - {fileID: 542755197}
+  - {fileID: 994860997}
+  - {fileID: 1077569614}
+  - {fileID: 41616547}
+  - {fileID: 418410446}
+  - {fileID: 488428078}
+  - {fileID: 784177117}
+  - {fileID: 1398352138}
+  - {fileID: 173143828}
+  - {fileID: 948007526}
+  - {fileID: 1949377809}
+  - {fileID: 1134775882}
+  - {fileID: 635625490}
+  - {fileID: 1481803220}
+  - {fileID: 1669893687}
+  rightLights:
+  - {fileID: 1057471410}
+  - {fileID: 215319464}
+  - {fileID: 114050492}
+  - {fileID: 1481095499}
+  - {fileID: 799246408}
+  - {fileID: 1983878552}
+  - {fileID: 1619515981}
+  - {fileID: 439199696}
+  - {fileID: 1194581697}
+  - {fileID: 197377464}
+  - {fileID: 1721994854}
+  - {fileID: 1897237205}
+  - {fileID: 420132559}
+  - {fileID: 773354168}
+  - {fileID: 1954311082}
+  - {fileID: 1785745651}
+  - {fileID: 201811024}
+  - {fileID: 1181977012}
+  - {fileID: 66305075}
+  - {fileID: 1861295111}
+  - {fileID: 1621443425}
+  - {fileID: 1443334283}
+  - {fileID: 816728942}
+  - {fileID: 1532958259}
+  - {fileID: 689436777}
+  - {fileID: 538499834}
+  - {fileID: 58531066}
+  - {fileID: 1861454137}
+  - {fileID: 277033120}
+  - {fileID: 671181055}
+  - {fileID: 188533734}
+  - {fileID: 1151817020}
+  - {fileID: 25634744}
+  - {fileID: 1719184578}
+  - {fileID: 1858347532}
+  - {fileID: 85462947}
+  - {fileID: 1843486522}
+  - {fileID: 1296780893}
   defaultColor: {r: 0.33333334, g: 0.33333334, b: 0.33333334, a: 1}
   alternateColor: {r: 0, g: 1, b: 0, a: 1}
   intesity: 3
@@ -4210,7 +4144,6 @@ GameObject:
   - component: {fileID: 418410452}
   - component: {fileID: 418410451}
   - component: {fileID: 418410450}
-  - component: {fileID: 418410449}
   - component: {fileID: 418410448}
   m_Layer: 6
   m_Name: Cylinder (6)
@@ -4330,19 +4263,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &418410449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418410446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &418410450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4437,7 +4357,6 @@ GameObject:
   - component: {fileID: 420132565}
   - component: {fileID: 420132564}
   - component: {fileID: 420132563}
-  - component: {fileID: 420132562}
   - component: {fileID: 420132561}
   m_Layer: 6
   m_Name: Cylinder (12)
@@ -4557,19 +4476,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &420132562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420132559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &420132563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4664,7 +4570,6 @@ GameObject:
   - component: {fileID: 439199702}
   - component: {fileID: 439199701}
   - component: {fileID: 439199700}
-  - component: {fileID: 439199699}
   - component: {fileID: 439199698}
   m_Layer: 6
   m_Name: Cylinder (7)
@@ -4784,19 +4689,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &439199699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 439199696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &439199700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4891,7 +4783,6 @@ GameObject:
   - component: {fileID: 488428084}
   - component: {fileID: 488428083}
   - component: {fileID: 488428082}
-  - component: {fileID: 488428081}
   - component: {fileID: 488428080}
   m_Layer: 6
   m_Name: Cylinder (7)
@@ -5011,19 +4902,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &488428081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 488428078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &488428082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5442,7 +5320,6 @@ GameObject:
   - component: {fileID: 538499840}
   - component: {fileID: 538499839}
   - component: {fileID: 538499838}
-  - component: {fileID: 538499837}
   - component: {fileID: 538499836}
   m_Layer: 6
   m_Name: Cylinder (4)
@@ -5562,19 +5439,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &538499837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 538499834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &538499838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5669,7 +5533,6 @@ GameObject:
   - component: {fileID: 542755203}
   - component: {fileID: 542755202}
   - component: {fileID: 542755201}
-  - component: {fileID: 542755200}
   - component: {fileID: 542755199}
   m_Layer: 6
   m_Name: Cylinder (2)
@@ -5789,19 +5652,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &542755200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542755197}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &542755201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6804,7 +6654,6 @@ GameObject:
   - component: {fileID: 635625496}
   - component: {fileID: 635625495}
   - component: {fileID: 635625494}
-  - component: {fileID: 635625493}
   - component: {fileID: 635625492}
   m_Layer: 6
   m_Name: Cylinder (14)
@@ -6924,19 +6773,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &635625493
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635625490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &635625494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7258,7 +7094,6 @@ GameObject:
   - component: {fileID: 671181061}
   - component: {fileID: 671181060}
   - component: {fileID: 671181059}
-  - component: {fileID: 671181058}
   - component: {fileID: 671181057}
   m_Layer: 6
   m_Name: Cylinder (8)
@@ -7378,19 +7213,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &671181058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671181055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &671181059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7582,7 +7404,6 @@ GameObject:
   - component: {fileID: 689436783}
   - component: {fileID: 689436782}
   - component: {fileID: 689436781}
-  - component: {fileID: 689436780}
   - component: {fileID: 689436779}
   m_Layer: 6
   m_Name: Cylinder (3)
@@ -7702,19 +7523,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &689436780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 689436777}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &689436781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8001,7 +7809,6 @@ GameObject:
   - component: {fileID: 773354174}
   - component: {fileID: 773354173}
   - component: {fileID: 773354172}
-  - component: {fileID: 773354171}
   - component: {fileID: 773354170}
   m_Layer: 6
   m_Name: Cylinder (13)
@@ -8121,19 +7928,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &773354171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 773354168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &773354172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8228,7 +8022,6 @@ GameObject:
   - component: {fileID: 784177123}
   - component: {fileID: 784177122}
   - component: {fileID: 784177121}
-  - component: {fileID: 784177120}
   - component: {fileID: 784177119}
   m_Layer: 6
   m_Name: Cylinder (8)
@@ -8348,19 +8141,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &784177120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 784177117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &784177121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8455,7 +8235,6 @@ GameObject:
   - component: {fileID: 799246414}
   - component: {fileID: 799246413}
   - component: {fileID: 799246412}
-  - component: {fileID: 799246411}
   - component: {fileID: 799246410}
   m_Layer: 6
   m_Name: Cylinder (4)
@@ -8575,19 +8354,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &799246411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799246408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &799246412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8682,7 +8448,6 @@ GameObject:
   - component: {fileID: 816728948}
   - component: {fileID: 816728947}
   - component: {fileID: 816728946}
-  - component: {fileID: 816728945}
   - component: {fileID: 816728944}
   m_Layer: 6
   m_Name: Cylinder (1)
@@ -8802,19 +8567,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &816728945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 816728942}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &816728946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8942,7 +8694,6 @@ GameObject:
   - component: {fileID: 948007532}
   - component: {fileID: 948007531}
   - component: {fileID: 948007530}
-  - component: {fileID: 948007529}
   - component: {fileID: 948007528}
   m_Layer: 6
   m_Name: Cylinder (11)
@@ -9062,19 +8813,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &948007529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 948007526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &948007530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9314,7 +9052,6 @@ GameObject:
   - component: {fileID: 994861003}
   - component: {fileID: 994861002}
   - component: {fileID: 994861001}
-  - component: {fileID: 994861000}
   - component: {fileID: 994860999}
   m_Layer: 6
   m_Name: Cylinder (3)
@@ -9434,19 +9171,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &994861000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994860997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &994861001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9834,7 +9558,6 @@ GameObject:
   - component: {fileID: 1057471416}
   - component: {fileID: 1057471415}
   - component: {fileID: 1057471414}
-  - component: {fileID: 1057471413}
   - component: {fileID: 1057471412}
   m_Layer: 6
   m_Name: Cylinder
@@ -9954,19 +9677,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1057471413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1057471410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1057471414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10288,7 +9998,6 @@ GameObject:
   - component: {fileID: 1077569620}
   - component: {fileID: 1077569619}
   - component: {fileID: 1077569618}
-  - component: {fileID: 1077569617}
   - component: {fileID: 1077569616}
   m_Layer: 6
   m_Name: Cylinder (4)
@@ -10408,19 +10117,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1077569617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077569614}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1077569618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10515,7 +10211,6 @@ GameObject:
   - component: {fileID: 1134775888}
   - component: {fileID: 1134775887}
   - component: {fileID: 1134775886}
-  - component: {fileID: 1134775885}
   - component: {fileID: 1134775884}
   m_Layer: 6
   m_Name: Cylinder (13)
@@ -10635,19 +10330,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1134775885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134775882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1134775886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10742,7 +10424,6 @@ GameObject:
   - component: {fileID: 1151817026}
   - component: {fileID: 1151817025}
   - component: {fileID: 1151817024}
-  - component: {fileID: 1151817023}
   - component: {fileID: 1151817022}
   m_Layer: 6
   m_Name: Cylinder (10)
@@ -10862,19 +10543,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1151817023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1151817020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1151817024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11221,7 +10889,6 @@ GameObject:
   - component: {fileID: 1181977018}
   - component: {fileID: 1181977017}
   - component: {fileID: 1181977016}
-  - component: {fileID: 1181977015}
   - component: {fileID: 1181977014}
   m_Layer: 6
   m_Name: Cylinder (17)
@@ -11341,19 +11008,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1181977015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181977012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1181977016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11546,7 +11200,6 @@ GameObject:
   - component: {fileID: 1194581703}
   - component: {fileID: 1194581702}
   - component: {fileID: 1194581701}
-  - component: {fileID: 1194581700}
   - component: {fileID: 1194581699}
   m_Layer: 6
   m_Name: Cylinder (8)
@@ -11666,19 +11319,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1194581700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194581697}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1194581701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12000,7 +11640,6 @@ GameObject:
   - component: {fileID: 1296780899}
   - component: {fileID: 1296780898}
   - component: {fileID: 1296780897}
-  - component: {fileID: 1296780896}
   - component: {fileID: 1296780895}
   m_Layer: 6
   m_Name: Cylinder (20)
@@ -12120,19 +11759,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1296780896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296780893}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1296780897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12555,7 +12181,6 @@ GameObject:
   - component: {fileID: 1398352144}
   - component: {fileID: 1398352143}
   - component: {fileID: 1398352142}
-  - component: {fileID: 1398352141}
   - component: {fileID: 1398352140}
   m_Layer: 6
   m_Name: Cylinder (9)
@@ -12675,19 +12300,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1398352141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1398352138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1398352142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12782,7 +12394,6 @@ GameObject:
   - component: {fileID: 1443334289}
   - component: {fileID: 1443334288}
   - component: {fileID: 1443334287}
-  - component: {fileID: 1443334286}
   - component: {fileID: 1443334285}
   m_Layer: 6
   m_Name: Cylinder
@@ -12902,19 +12513,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1443334286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443334283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1443334287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13236,7 +12834,6 @@ GameObject:
   - component: {fileID: 1481095505}
   - component: {fileID: 1481095504}
   - component: {fileID: 1481095503}
-  - component: {fileID: 1481095502}
   - component: {fileID: 1481095501}
   m_Layer: 6
   m_Name: Cylinder (3)
@@ -13356,19 +12953,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1481095502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481095499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1481095503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13463,7 +13047,6 @@ GameObject:
   - component: {fileID: 1481803226}
   - component: {fileID: 1481803225}
   - component: {fileID: 1481803224}
-  - component: {fileID: 1481803223}
   - component: {fileID: 1481803222}
   m_Layer: 6
   m_Name: Cylinder (15)
@@ -13583,19 +13166,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1481803223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1481803220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1481803224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13918,7 +13488,6 @@ GameObject:
   - component: {fileID: 1532958265}
   - component: {fileID: 1532958264}
   - component: {fileID: 1532958263}
-  - component: {fileID: 1532958262}
   - component: {fileID: 1532958261}
   m_Layer: 6
   m_Name: Cylinder (2)
@@ -14038,19 +13607,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1532958262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532958259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1532958263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14494,7 +14050,6 @@ GameObject:
   - component: {fileID: 1619515987}
   - component: {fileID: 1619515986}
   - component: {fileID: 1619515985}
-  - component: {fileID: 1619515984}
   - component: {fileID: 1619515983}
   m_Layer: 6
   m_Name: Cylinder (6)
@@ -14614,19 +14169,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1619515984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1619515981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1619515985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14721,7 +14263,6 @@ GameObject:
   - component: {fileID: 1621443431}
   - component: {fileID: 1621443430}
   - component: {fileID: 1621443429}
-  - component: {fileID: 1621443428}
   - component: {fileID: 1621443427}
   m_Layer: 6
   m_Name: Cylinder (20)
@@ -14841,19 +14382,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1621443428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621443425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1621443429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14981,7 +14509,6 @@ GameObject:
   - component: {fileID: 1669893693}
   - component: {fileID: 1669893692}
   - component: {fileID: 1669893691}
-  - component: {fileID: 1669893690}
   - component: {fileID: 1669893689}
   m_Layer: 6
   m_Name: Cylinder (20)
@@ -15101,19 +14628,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1669893690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669893687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1669893691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15435,7 +14949,6 @@ GameObject:
   - component: {fileID: 1719184584}
   - component: {fileID: 1719184583}
   - component: {fileID: 1719184582}
-  - component: {fileID: 1719184581}
   - component: {fileID: 1719184580}
   m_Layer: 6
   m_Name: Cylinder (12)
@@ -15555,19 +15068,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1719184581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719184578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1719184582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15662,7 +15162,6 @@ GameObject:
   - component: {fileID: 1721994860}
   - component: {fileID: 1721994859}
   - component: {fileID: 1721994858}
-  - component: {fileID: 1721994857}
   - component: {fileID: 1721994856}
   m_Layer: 6
   m_Name: Cylinder (10)
@@ -15782,19 +15281,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1721994857
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721994854}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1721994858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16213,7 +15699,6 @@ GameObject:
   - component: {fileID: 1765204186}
   - component: {fileID: 1765204185}
   - component: {fileID: 1765204184}
-  - component: {fileID: 1765204183}
   - component: {fileID: 1765204182}
   m_Layer: 6
   m_Name: Cylinder
@@ -16333,19 +15818,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1765204183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1765204180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1765204184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16440,7 +15912,6 @@ GameObject:
   - component: {fileID: 1785745657}
   - component: {fileID: 1785745656}
   - component: {fileID: 1785745655}
-  - component: {fileID: 1785745654}
   - component: {fileID: 1785745653}
   m_Layer: 6
   m_Name: Cylinder (15)
@@ -16560,19 +16031,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1785745654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1785745651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1785745655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16667,7 +16125,6 @@ GameObject:
   - component: {fileID: 1843486528}
   - component: {fileID: 1843486527}
   - component: {fileID: 1843486526}
-  - component: {fileID: 1843486525}
   - component: {fileID: 1843486524}
   m_Layer: 6
   m_Name: Cylinder (15)
@@ -16787,19 +16244,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1843486525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1843486522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1843486526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16894,7 +16338,6 @@ GameObject:
   - component: {fileID: 1858347538}
   - component: {fileID: 1858347537}
   - component: {fileID: 1858347536}
-  - component: {fileID: 1858347535}
   - component: {fileID: 1858347534}
   m_Layer: 6
   m_Name: Cylinder (13)
@@ -17014,19 +16457,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1858347535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858347532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1858347536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17121,7 +16551,6 @@ GameObject:
   - component: {fileID: 1861295117}
   - component: {fileID: 1861295116}
   - component: {fileID: 1861295115}
-  - component: {fileID: 1861295114}
   - component: {fileID: 1861295113}
   m_Layer: 6
   m_Name: Cylinder (19)
@@ -17241,19 +16670,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1861295114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861295111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1861295115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17348,7 +16764,6 @@ GameObject:
   - component: {fileID: 1861454143}
   - component: {fileID: 1861454142}
   - component: {fileID: 1861454141}
-  - component: {fileID: 1861454140}
   - component: {fileID: 1861454139}
   m_Layer: 6
   m_Name: Cylinder (6)
@@ -17468,19 +16883,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1861454140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861454137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1861454141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17669,7 +17071,6 @@ GameObject:
   - component: {fileID: 1897237211}
   - component: {fileID: 1897237210}
   - component: {fileID: 1897237209}
-  - component: {fileID: 1897237208}
   - component: {fileID: 1897237207}
   m_Layer: 6
   m_Name: Cylinder (11)
@@ -17789,19 +17190,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1897237208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897237205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1897237209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18288,7 +17676,6 @@ GameObject:
   - component: {fileID: 1949377815}
   - component: {fileID: 1949377814}
   - component: {fileID: 1949377813}
-  - component: {fileID: 1949377812}
   - component: {fileID: 1949377811}
   m_Layer: 6
   m_Name: Cylinder (12)
@@ -18408,19 +17795,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1949377812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949377809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1949377813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18612,7 +17986,6 @@ GameObject:
   - component: {fileID: 1954311088}
   - component: {fileID: 1954311087}
   - component: {fileID: 1954311086}
-  - component: {fileID: 1954311085}
   - component: {fileID: 1954311084}
   m_Layer: 6
   m_Name: Cylinder (14)
@@ -18732,19 +18105,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1954311085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954311082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1954311086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19091,7 +18451,6 @@ GameObject:
   - component: {fileID: 1983878558}
   - component: {fileID: 1983878557}
   - component: {fileID: 1983878556}
-  - component: {fileID: 1983878555}
   - component: {fileID: 1983878554}
   m_Layer: 6
   m_Name: Cylinder (5)
@@ -19211,19 +18570,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1983878555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983878552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1983878556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19415,7 +18761,6 @@ GameObject:
   - component: {fileID: 2052956111}
   - component: {fileID: 2052956110}
   - component: {fileID: 2052956109}
-  - component: {fileID: 2052956108}
   - component: {fileID: 2052956107}
   m_Layer: 6
   m_Name: Cylinder (1)
@@ -19535,19 +18880,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2052956108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052956105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &2052956109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21106,19 +20438,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524041633444014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524041633444016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524041633444015
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21228,7 +20547,6 @@ GameObject:
   - component: {fileID: 1337524041633444019}
   - component: {fileID: 1337524041633444018}
   - component: {fileID: 1337524041633444013}
-  - component: {fileID: 1337524041633444014}
   - component: {fileID: 1337524041633444015}
   m_Layer: 6
   m_Name: Cylinder (20)
@@ -21712,19 +21030,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524041795048629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524041795048639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524041795048630
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21913,7 +21218,6 @@ GameObject:
   - component: {fileID: 1337524041795048634}
   - component: {fileID: 1337524041795048633}
   - component: {fileID: 1337524041795048628}
-  - component: {fileID: 1337524041795048629}
   - component: {fileID: 1337524041795048630}
   m_Layer: 6
   m_Name: Cylinder (9)
@@ -21939,19 +21243,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524041830738705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524041830738715}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524041830738706
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22140,7 +21431,6 @@ GameObject:
   - component: {fileID: 1337524041830738710}
   - component: {fileID: 1337524041830738709}
   - component: {fileID: 1337524041830738704}
-  - component: {fileID: 1337524041830738705}
   - component: {fileID: 1337524041830738706}
   m_Layer: 6
   m_Name: Cylinder (15)
@@ -22271,19 +21561,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524041888859578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524041888859580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524041888859579
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22393,7 +21670,6 @@ GameObject:
   - component: {fileID: 1337524041888859583}
   - component: {fileID: 1337524041888859582}
   - component: {fileID: 1337524041888859577}
-  - component: {fileID: 1337524041888859578}
   - component: {fileID: 1337524041888859579}
   m_Layer: 6
   m_Name: Cylinder (16)
@@ -22473,19 +21749,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1337524042009743004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042009743013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042009743005
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22676,7 +21939,6 @@ GameObject:
   - component: {fileID: 1337524042009743009}
   - component: {fileID: 1337524042009743008}
   - component: {fileID: 1337524042009743011}
-  - component: {fileID: 1337524042009743004}
   - component: {fileID: 1337524042009743005}
   m_Layer: 6
   m_Name: Cylinder
@@ -23603,19 +22865,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultColor: {r: 0.50980395, g: 0, b: 0, a: 1}
   alternateColor: {r: 0.6603774, g: 0, b: 0, a: 1}
---- !u!114 &1337524042114280800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042114280810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042114280801
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23806,7 +23055,6 @@ GameObject:
   - component: {fileID: 1337524042114280805}
   - component: {fileID: 1337524042114280804}
   - component: {fileID: 1337524042114280807}
-  - component: {fileID: 1337524042114280800}
   - component: {fileID: 1337524042114280801}
   m_Layer: 6
   m_Name: Cylinder (14)
@@ -24054,19 +23302,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524042223915327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042223915457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!1 &1337524042223915457
 GameObject:
   m_ObjectHideFlags: 0
@@ -24080,7 +23315,6 @@ GameObject:
   - component: {fileID: 1337524042223915324}
   - component: {fileID: 1337524042223915459}
   - component: {fileID: 1337524042223915326}
-  - component: {fileID: 1337524042223915327}
   - component: {fileID: 1337524042223915320}
   m_Layer: 6
   m_Name: Cylinder (18)
@@ -24143,19 +23377,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524042246425962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042246425971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042246425963
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24336,7 +23557,6 @@ GameObject:
   - component: {fileID: 1337524042246425967}
   - component: {fileID: 1337524042246425966}
   - component: {fileID: 1337524042246425961}
-  - component: {fileID: 1337524042246425962}
   - component: {fileID: 1337524042246425963}
   m_Layer: 6
   m_Name: Cylinder (1)
@@ -24362,19 +23582,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524042300263909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042300263918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042300263910
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24548,7 +23755,6 @@ GameObject:
   - component: {fileID: 1337524042300263914}
   - component: {fileID: 1337524042300263913}
   - component: {fileID: 1337524042300263908}
-  - component: {fileID: 1337524042300263909}
   - component: {fileID: 1337524042300263910}
   m_Layer: 6
   m_Name: Cylinder (2)
@@ -24589,19 +23795,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524042317044941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042317044951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042317044942
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24790,7 +23983,6 @@ GameObject:
   - component: {fileID: 1337524042317044946}
   - component: {fileID: 1337524042317044945}
   - component: {fileID: 1337524042317044940}
-  - component: {fileID: 1337524042317044941}
   - component: {fileID: 1337524042317044942}
   m_Layer: 6
   m_Name: Cylinder (11)
@@ -24799,19 +23991,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1337524042336494372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042336494382}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042336494373
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25002,7 +24181,6 @@ GameObject:
   - component: {fileID: 1337524042336494377}
   - component: {fileID: 1337524042336494376}
   - component: {fileID: 1337524042336494379}
-  - component: {fileID: 1337524042336494372}
   - component: {fileID: 1337524042336494373}
   m_Layer: 6
   m_Name: Cylinder (17)
@@ -25051,19 +24229,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524042347356726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042347356728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042347356727
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25173,7 +24338,6 @@ GameObject:
   - component: {fileID: 1337524042347356731}
   - component: {fileID: 1337524042347356730}
   - component: {fileID: 1337524042347356725}
-  - component: {fileID: 1337524042347356726}
   - component: {fileID: 1337524042347356727}
   m_Layer: 6
   m_Name: Cylinder (12)
@@ -25253,19 +24417,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1337524042352005204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042352005214}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042352005205
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25456,7 +24607,6 @@ GameObject:
   - component: {fileID: 1337524042352005209}
   - component: {fileID: 1337524042352005208}
   - component: {fileID: 1337524042352005211}
-  - component: {fileID: 1337524042352005204}
   - component: {fileID: 1337524042352005205}
   m_Layer: 6
   m_Name: Cylinder (8)
@@ -26480,19 +25630,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1337524042569670916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042569670926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524042569670917
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26683,7 +25820,6 @@ GameObject:
   - component: {fileID: 1337524042569670921}
   - component: {fileID: 1337524042569670920}
   - component: {fileID: 1337524042569670923}
-  - component: {fileID: 1337524042569670916}
   - component: {fileID: 1337524042569670917}
   m_Layer: 6
   m_Name: Cylinder (19)
@@ -27586,19 +26722,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524042871182855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524042871182857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!1 &1337524042871182857
 GameObject:
   m_ObjectHideFlags: 0
@@ -27612,7 +26735,6 @@ GameObject:
   - component: {fileID: 1337524042871182852}
   - component: {fileID: 1337524042871182859}
   - component: {fileID: 1337524042871182854}
-  - component: {fileID: 1337524042871182855}
   - component: {fileID: 1337524042871182848}
   m_Layer: 6
   m_Name: Cylinder (10)
@@ -27943,19 +27065,6 @@ Transform:
   m_Father: {fileID: 1337524042133580505}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1337524043133340916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524043133340925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524043133340917
 AudioSource:
   m_ObjectHideFlags: 0
@@ -28146,7 +27255,6 @@ GameObject:
   - component: {fileID: 1337524043133340921}
   - component: {fileID: 1337524043133340920}
   - component: {fileID: 1337524043133340923}
-  - component: {fileID: 1337524043133340916}
   - component: {fileID: 1337524043133340917}
   m_Layer: 6
   m_Name: Cylinder (3)
@@ -28952,19 +28060,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524043430439693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524043430439703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!82 &1337524043430439694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29153,7 +28248,6 @@ GameObject:
   - component: {fileID: 1337524043430439698}
   - component: {fileID: 1337524043430439697}
   - component: {fileID: 1337524043430439692}
-  - component: {fileID: 1337524043430439693}
   - component: {fileID: 1337524043430439694}
   m_Layer: 6
   m_Name: Cylinder (7)
@@ -29982,19 +29076,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!114 &1337524043602193563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1337524043602193565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!1 &1337524043602193565
 GameObject:
   m_ObjectHideFlags: 0
@@ -30008,7 +29089,6 @@ GameObject:
   - component: {fileID: 1337524043602193560}
   - component: {fileID: 1337524043602193567}
   - component: {fileID: 1337524043602193562}
-  - component: {fileID: 1337524043602193563}
   - component: {fileID: 1337524043602193556}
   m_Layer: 6
   m_Name: Cylinder (13)
@@ -31660,7 +30740,6 @@ GameObject:
   - component: {fileID: 1552767885750527774}
   - component: {fileID: 1552767885750527773}
   - component: {fileID: 1552767885750527772}
-  - component: {fileID: 1552767885750527771}
   - component: {fileID: 1552767885750527770}
   m_Layer: 6
   m_Name: Cylinder (5)
@@ -31780,19 +30859,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1552767885750527771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552767885750527768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1552767885750527772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32017,7 +31083,6 @@ GameObject:
   - component: {fileID: 1552767886113843411}
   - component: {fileID: 1552767886113843410}
   - component: {fileID: 1552767886113843409}
-  - component: {fileID: 1552767886113843408}
   - component: {fileID: 1552767886113843407}
   m_Layer: 6
   m_Name: Cylinder (6)
@@ -32137,19 +31202,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1552767886113843408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552767886113843405}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1552767886113843409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32471,7 +31523,6 @@ GameObject:
   - component: {fileID: 1552767886656707284}
   - component: {fileID: 1552767886656707283}
   - component: {fileID: 1552767886656707282}
-  - component: {fileID: 1552767886656707281}
   - component: {fileID: 1552767886656707280}
   m_Layer: 6
   m_Name: Cylinder (4)
@@ -32591,19 +31642,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1552767886656707281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552767886656707278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d173c171cc4136942b60ef9f3f49638c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLit: 0
 --- !u!114 &1552767886656707282
 MonoBehaviour:
   m_ObjectHideFlags: 0
