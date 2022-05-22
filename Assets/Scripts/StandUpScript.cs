@@ -78,7 +78,7 @@ public class StandUpScript : MonoBehaviour {
     }
 
     public void OnTriggerEnter (Collider collider) {
-        if (collider.gameObject.tag == "Ball") {
+        if (collider.gameObject.tag == "Ball" && this.gameObject.tag == "StandUp") {
             hasTriggered = true;
             audioData.Play(0);
             lightingManager.GetComponent<LightingManagerScript>().LightUp();

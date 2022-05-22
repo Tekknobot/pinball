@@ -156,7 +156,7 @@ public class LightingManagerScript : MonoBehaviour
         lights[indexCount].GetComponent<Renderer>().material.SetColor("_Color", alternateColor);
         lights[indexCount].GetComponent<Renderer>().material.SetColor("_EmissionColor", alternateColor * Mathf.Pow(2, intesity));
         lights[indexCount].GetComponent<LightScript>().isLit = true; 
-        list.RemoveAt(indexCount);      
+        //list.RemoveAt(indexCount);      
         indexCount++;
     }
 
