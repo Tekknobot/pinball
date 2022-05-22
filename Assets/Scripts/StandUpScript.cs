@@ -44,35 +44,35 @@ public class StandUpScript : MonoBehaviour {
             GetComponent<BoxCollider>().enabled = true;
         }
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 1) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 1 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = blackMech;
         }
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 2) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 2 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = cyanMech;
         }
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 3) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 3 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = magentaMech;
         }      
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 4) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 4 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = yellowMech;
         }
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 5) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 5 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = redMech;
         }
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 6) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 6 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = blueMech;
         }      
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 7) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel == 7 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = greenMech;
         }   
 
-        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel >= 8) {
+        if (lightingManager.GetComponent<LightingManagerScript>().colorLevel >= 8 && gameObject.tag != "LargeStandUp") {
             textureObject.GetComponent<Renderer>().material = blackMech;
         }                          
     }
@@ -86,5 +86,15 @@ public class StandUpScript : MonoBehaviour {
             GetComponent<BoxCollider>().enabled = false;
             SumScore.Add(50);
         }
+
+        if (collider.gameObject.tag == "Ball" && this.gameObject.tag == "LargeStandUp") {
+            hasTriggered = true;
+            audioData.Play(0);
+            lightingManager.GetComponent<LightingManagerScript>().LightUp();
+            GameObject newObject = Instantiate(explosion, this.transform.position, Quaternion.identity) as GameObject;  // instatiate the object
+            newObject.transform.localScale = new Vector3(0.05f, 0.05f, 1); // change its local scale in x y z format            
+            GetComponent<BoxCollider>().enabled = false;
+            SumScore.Add(50);
+        }        
     }
 }

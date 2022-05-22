@@ -15,6 +15,12 @@ TagManager:
   - Floor
   - Flipper
   - Bumper
+  - NPC
+  - Building
+  - Projectile
+  - Particles
+  - Tile
+  - LargeStandUp
   layers:
   - Default
   - TransparentFX

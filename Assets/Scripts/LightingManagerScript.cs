@@ -13,6 +13,7 @@ public class LightingManagerScript : MonoBehaviour
     private GameObject ball;
 
     private GameObject[] standUps;
+    private GameObject[] largeStandUps;
 
     public Color defaultColor = new Color32(85, 85, 85, 255);
     public Color alternateColor = new Color32(80, 80, 80, 255);
@@ -31,7 +32,8 @@ public class LightingManagerScript : MonoBehaviour
         // rightLights = GameObject.FindGameObjectsWithTag("RightLight");
         ball = GameObject.FindGameObjectWithTag ("Ball");
 
-        standUps = GameObject.FindGameObjectsWithTag("StandUp");        
+        standUps = GameObject.FindGameObjectsWithTag("StandUp");       
+        largeStandUps = GameObject.FindGameObjectsWithTag("LargeStandUp");   
     }
 
     // Start is called before the first frame update
@@ -233,7 +235,10 @@ public class LightingManagerScript : MonoBehaviour
     public void CheckStandUp() {
         foreach (GameObject standUp in standUps) {
             standUp.GetComponent<StandUpScript>().hasTriggered = false;
-        }     
+        }  
+        foreach (GameObject largeStandUp in largeStandUps) {
+            largeStandUp.GetComponent<StandUpScript>().hasTriggered = false;
+        }            
     }
 
     public void PopulateLightList() {
