@@ -4,7 +4,7 @@ using UnityEngine;
  
 public class BumperScript : MonoBehaviour
 {
-    public int bumperForce = 800;
+    public int bumperForce = 150;
     private GameObject ball;
     private GameObject[] standUps;
     private GameObject[] bumpers;
