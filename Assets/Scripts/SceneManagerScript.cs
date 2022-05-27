@@ -20,6 +20,10 @@ public class SceneManagerScript : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.B)){
             SceneManager.LoadScene(1);
-        }                 
+        }      
+
+        if(Input.GetKeyDown(KeyCode.C)){
+            SceneManager.LoadScene(2);
+        }                      
     }
 }
